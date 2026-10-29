@@ -1,5 +1,5 @@
 # Project status
-Date: 2026-10-29. Current milestone: Phase 2 baseline and annotation pilot prepared on a feature branch; independent validation pending.
+Date: 2026-10-29. Current milestone: Phase 2 pilot review workbench and agreement tooling implemented on a stacked feature branch; independent human validation pending.
 
 ## Completed foundations
 - Phase 0: requirements, architecture, MVP gates, data guide, methodology, schema, risks and roadmap.
@@ -34,3 +34,13 @@ No completed human reviews, agreement metrics, task-model accuracy, 0–100 expo
 - 2026-10-29: initialized project foundations and source discovery.
 - 2026-10-29: acquired, normalized and validated the core data pipeline.
 - 2026-10-29: prepared the lexical evidence baseline and frozen independent-review pilot on a feature branch. See Git history and the pull request for proposed changes.
+
+## Offline review workbench increment
+- Branch: feature/review-workbench-evaluation, based on the open Phase 2 PR and targeting feature/phase-2-task-exposure. No automatic merge into main.
+- Added a self-contained offline review form per reviewer slot with local draft backup/resume and completed-only response export. Unfinished drafts remain blank in response files.
+- Added shared frozen-run/response verification, consistent reviewer-slot identity checks, gated nominal agreement diagnostics and pending adjudication output.
+- All assessment inputs start empty. No model suggestions, completed human labels or real study agreement statistics are supplied.
+- Python tests cover known-answer kappa, unknown/undefined handling, evidence gates, frozen-run integrity and safe blind HTML bundling. A synthetic Chromium round-trip test is configured in GitHub Actions; check the PR checks for its current result.
+- Local Chromium could not launch because this execution environment denies a required socket operation. No local browser visual verification is claimed; the GitHub browser job is the verification path.
+
+Next: review the stacked changes, assign the two independent reviewers, use the workbench to label tasks, validate returned files, then inspect agreement/disagreements before developing validated exposure/HVI scores.

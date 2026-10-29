@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>HumanBridge · Independent task review</title>
+<style>__HB_CSS__</style>
+</head>
+<body>
+<header><div class="brand"><span class="mark">HB</span><div>HumanBridge AI<small>Independent task review</small></div></div><span id="slot-badge" class="badge"></span></header>
+<div class="page">
+<section class="intro"><div><p class="eyebrow">RESEARCH WORKBENCH</p><h1>Read the task. Make your judgment.</h1><p>Review the evidence independently. No machine suggestions are shown.</p></div><div class="progress-box"><strong id="progress">0 of 200</strong><span>reviews completed</span><progress id="progress-bar" value="0" max="200"></progress></div></section>
+<section class="workspace">
+<aside><label for="search">Find a task</label><input id="search" type="search" placeholder="Occupation or task text"><div class="filter-line"><label for="filter">Show</label><select id="filter"><option value="all">All tasks</option><option value="unfinished">Not completed</option><option value="completed">Completed</option></select></div><nav id="task-list" aria-label="Task queue"></nav></aside>
+<main>
+<div class="task-toolbar"><span id="task-position"></span><div><button id="previous" class="quiet">Previous</button><button id="next" class="quiet">Next</button></div></div>
+<article class="task-card"><p id="task-meta" class="eyebrow"></p><h2 id="occupation-title"></h2><p id="task-text" class="task-text"></p><p id="task-source" class="subtle"></p></article>
+<details class="guide"><summary>Review scenario and label guide</summary><p id="scenario"></p><p><strong>Dimension ratings:</strong> Not supported = no sufficient support in the cited evidence. Supporting = a relevant supporting requirement. Central = central to executing the task. Insufficient evidence = context does not support a judgment.</p><p><strong>Exposure:</strong> Assistive candidate = a bounded supporting substep. Substantial candidate = assistance with a core operation, conditional on documented quality and oversight. These are qualitative hypotheses, not time-saving measurements.</p><p><strong>Workflow:</strong> An automation candidate needs evidence for the complete bounded operation, inputs, quality checks and oversight. A wording match is never enough. Use insufficient evidence when context is missing.</p><p>Keep cultural and creative judgments evidence-based. A job title is not evidence of a person's abilities or worth.</p></details>
+<form id="review-form" novalidate>
+<div class="section-heading"><h3>Your assessment</h3><span id="task-status" class="status">Not completed</span></div>
+<div id="dimensions" class="dimension-grid"></div>
+<div class="two-columns"><div><label for="exposure">Overall exposure hypothesis</label><select id="exposure"></select></div><div><label for="workflow">Workflow hypothesis</label><select id="workflow"></select></div></div>
+<label for="rationale">Reasoning</label><textarea id="rationale" rows="4" placeholder="Describe the operation, inputs, quality requirements, human role and missing context. At least 20 characters."></textarea>
+<label for="evidence">Evidence references <span class="subtle">one per line</span></label><textarea id="evidence" rows="3" placeholder="Source task key, capability study, observed experiment, or other specific evidence."></textarea>
+<label for="context">Additional context <span class="subtle">optional</span></label><textarea id="context" rows="2" placeholder="Document assumptions or information still needed."></textarea>
+<div class="completion-row"><div><label for="reviewer">Reviewer pseudonym</label><input id="reviewer" autocomplete="off" placeholder="Use one consistent pseudonym for this file"></div><button id="complete" type="submit" class="primary">Mark completed</button><button id="reopen" type="button" class="quiet">Reopen review</button></div>
+<p id="message" role="status" aria-live="polite"></p>
+</form>
+</main>
+</section>
+<section class="export-panel"><div><h3>Keep your work</h3><p>Drafts stay in this tab. Download a draft backup before closing. Response export includes completed reviews; unfinished drafts remain blank.</p></div><div class="export-actions"><button id="export-draft">Download draft backup</button><label class="file-button" for="import-file" role="button" tabindex="0">Resume a draft or response</label><input id="import-file" type="file" accept=".json,.jsonl" hidden><button id="export-response" class="primary">Export review responses</button></div><p id="export-message" role="status" aria-live="polite"></p></section>
+<footer><details><summary>Source attribution and run identity</summary><pre id="source-notice"></pre><p id="run-meta"></p></details><p>This file works offline. It does not send responses to a server. No human reviews or capability scores are supplied automatically.</p></footer>
+</div>
+<script id="hb-payload" type="application/json">__HB_PAYLOAD__</script>
+<script>__HB_JS__</script>
+</body>
+</html>

@@ -66,3 +66,6 @@ Missing/duplicate tasks, changed source text, unexpected machine fields, partial
 - validate_task_reviews.py validates returned records against the immutable run; it requires the original run and matching rubric.
 
 These modules do not change the source SQLite schema or fill its task_score table. The next evaluation phase requires actual independent labels, adjudication and a preregistered comparison protocol.
+
+## Offline review and subsequent agreement
+The [offline workbench](review-workbench.md) replaces manual JSON editing with an independent review form. It exports completed records plus original blanks for unfinished drafts; use its draft backup for in-progress work. Shared run/response validation now requires a complete artifact hash set and a consistent pseudonym per slot. After genuine paired reviews, the gated agreement tool produces agreement diagnostics and empty adjudication items. No completed study labels or agreement results exist yet.
