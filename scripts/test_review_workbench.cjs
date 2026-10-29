@@ -1,0 +1,84 @@
+/* Optional Chromium smoke check. Uses synthetic records only; no study labels created. */
+const fs = require("node:fs/promises");
+const path = require("node:path");
+const assert = require("node:assert/strict");
+const {pathToFileURL} = require("node:url");
+const {chromium} = require("playwright");
+
+(async () => {
+  const [fixture, outputDirectory, realWorkbench] = process.argv.slice(2);
+  if (!fixture || !outputDirectory) throw new Error("Usage: node test_review_workbench.cjs FIXTURE_HTML OUTPUT_DIRECTORY [REAL_EMPTY_WORKBENCH]");
+  await fs.mkdir(outputDirectory, {recursive:true});
+  const browser = await chromium.launch({headless:true,executablePath:chromium.executablePath()});
+  try {
+    const context = await browser.newContext({acceptDownloads:true, viewport:{width:1440,height:1100}});
+    const page = await context.newPage(); const errors = []; const network = [];
+    page.on("pageerror", error => errors.push(error.message));
+    page.on("request", request => { if (/^https?:/.test(request.url())) network.push(request.url()); });
+    await page.goto(pathToFileURL(path.resolve(fixture)).href);
+    assert.equal(await page.locator("#progress").textContent(), "0 of 2");
+    assert.equal(await page.locator("#task-text img").count(), 0);
+    assert.match(await page.locator("#task-text").textContent(), /<img src=x/);
+    await page.screenshot({path:path.join(outputDirectory,"fixture-desktop.png"),fullPage:true});
+    await page.getByRole("button", {name:"Mark completed",exact:true}).click();
+    assert.match(await page.locator("#message").textContent(), /pseudonym/);
+    await page.getByLabel("Reviewer pseudonym").fill("synthetic-browser-reviewer");
+    await page.getByLabel("Reasoning", {exact:true}).fill("Synthetic draft that is not a completed human study review.");
+    await page.getByRole("button", {name:"Next",exact:true}).click();
+    await page.getByRole("button", {name:"Previous",exact:true}).click();
+    assert.match(await page.getByLabel("Reasoning",{exact:true}).inputValue(), /Synthetic draft/);
+    let downloadEvent = page.waitForEvent("download");
+    await page.getByRole("button",{name:"Download draft backup",exact:true}).click();
+    const draftDownload = await downloadEvent; const draftPath = path.join(outputDirectory,"synthetic-draft.json");
+    await draftDownload.saveAs(draftPath);
+    const originalDraft=JSON.parse(await fs.readFile(draftPath,"utf8"));
+    const reorderedPath=path.join(outputDirectory,"synthetic-reordered-draft.json");
+    await fs.writeFile(reorderedPath,JSON.stringify({records:originalDraft.records,slot:originalDraft.slot,reviewer_id:originalDraft.reviewer_id,run_id:originalDraft.run_id,format:originalDraft.format}));
+    downloadEvent = page.waitForEvent("download");
+    await page.getByRole("button",{name:"Export review responses",exact:true}).click();
+    const blankDownload = await downloadEvent; const blankPath = path.join(outputDirectory,"synthetic-unfinished.jsonl");
+    await blankDownload.saveAs(blankPath);
+    const blanks = (await fs.readFile(blankPath,"utf8")).trim().split("\n").map(JSON.parse);
+    assert(blanks.every(row => row.review_status === "unreviewed" && row.rationale === null));
+    await page.reload(); await page.locator("#import-file").setInputFiles(reorderedPath);
+    await page.waitForFunction(() => document.getElementById("export-message").textContent.includes("Imported locally"));
+    assert.match(await page.getByLabel("Reasoning",{exact:true}).inputValue(), /Synthetic draft/);
+    for (const select of await page.locator("#dimensions select").all()) await select.selectOption("insufficient_evidence");
+    await page.getByLabel("Overall exposure hypothesis").selectOption("insufficient_evidence");
+    await page.getByLabel("Workflow hypothesis").selectOption("insufficient_evidence");
+    await page.getByLabel("Evidence references").fill("synthetic-test-reference-not-study-evidence");
+    await page.getByRole("button",{name:"Mark completed",exact:true}).click();
+    assert.equal(await page.locator("#progress").textContent(), "1 of 2");
+    assert(await page.getByLabel("Reasoning",{exact:true}).isDisabled());
+    downloadEvent = page.waitForEvent("download");
+    await page.getByRole("button",{name:"Export review responses",exact:true}).click();
+    const responses = await downloadEvent; const responsePath = path.join(outputDirectory,"synthetic-responses.jsonl");
+    await responses.saveAs(responsePath);
+    const rows = (await fs.readFile(responsePath,"utf8")).trim().split("\n").map(JSON.parse);
+    assert.equal(rows.filter(row=>row.review_status==="completed").length,1);
+    const tampered = JSON.parse(await fs.readFile(draftPath,"utf8")); tampered.records[0].task_text="Changed source task";
+    const tamperedPath=path.join(outputDirectory,"synthetic-tampered.json"); await fs.writeFile(tamperedPath,JSON.stringify(tampered));
+    await page.locator("#import-file").setInputFiles(tamperedPath);
+    await page.waitForFunction(() => document.getElementById("export-message").textContent.includes("identity"));
+    assert.equal(await page.locator("#progress").textContent(), "1 of 2");
+    await page.getByRole("button",{name:"Reopen review",exact:true}).click();
+    assert.equal(await page.locator("#progress").textContent(), "0 of 2");
+    await page.setViewportSize({width:390,height:844});
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth));
+    await page.screenshot({path:path.join(outputDirectory,"fixture-mobile.png"),fullPage:true});
+    if (realWorkbench) {
+      const real = await context.newPage(); real.on("pageerror", error=>errors.push(error.message));
+      real.on("request",request=>{if(/^https?:/.test(request.url()))network.push(request.url());});
+      await real.goto(pathToFileURL(path.resolve(realWorkbench)).href);
+      assert.equal(await real.locator("#progress").textContent(),"0 of 200");
+      assert.equal(await real.locator("#dimensions select").count(),9);
+      await real.screenshot({path:path.join(outputDirectory,"workbench-desktop.png"),fullPage:true});
+      await real.setViewportSize({width:390,height:844});
+      assert(await real.evaluate(()=>document.documentElement.scrollWidth <= window.innerWidth));
+      await real.screenshot({path:path.join(outputDirectory,"workbench-mobile.png"),fullPage:true});
+    }
+    assert.deepEqual(errors,[]); assert.deepEqual(network,[]);
+    console.log(JSON.stringify({browser:"Chromium",syntheticRoundTrip:"passed",unfinishedDraftExport:"blank",tamperedImport:"rejected",networkRequests:network.length,pageErrors:errors.length,mobileOverflow:false}));
+    await context.close();
+  } finally { await browser.close(); }
+})().catch(error=>{console.error(error);process.exitCode=1;});

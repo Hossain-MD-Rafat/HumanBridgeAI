@@ -15,6 +15,7 @@ HumanBridge AI is a research and engineering project that helps workers understa
 7. [Current status and next session](docs/project-status.md)
 8. [Run the data pipeline](docs/running-pipeline.md) and inspect the [coverage report](docs/reports/core-data.json)
 9. [Task review rubric](docs/task-rubric.md), [pilot instructions](docs/task-annotation-guide.md), and [pilot report](docs/reports/task-pilot.json)
+10. [Offline review workbench and agreement analysis](docs/review-workbench.md)
 
 The [original master brain](docs/master-brain.md) records the owner's vision. Implementation decisions and current status live in the documents above.
 
@@ -82,3 +83,16 @@ python scripts/prepare_task_pilot.py
 Expected: 200 tasks from 20 occupations across 17 major groups, two blind review queues, 160 development-only lexical suggestions and no holdout suggestions. All human labels and headline scores remain unset. The 40-task pilot holdout has a selected-text duplicate audit; semantic leakage review remains pending. See [annotation instructions](docs/task-annotation-guide.md).
 
 Phase 2 uses `feature/phase-2-task-exposure` and a pull request targeting `main`; implementation is separate from review and merge.
+
+## Review the pilot offline
+After pilot preparation:
+
+```bash
+python scripts/build_review_workbench.py artifacts/task-pilot/2f50657777212dcae013 --slot A
+```
+
+Open the printed HTML path in a browser. The file shows one blind reviewer queue, supports draft backup/resume, and exports validator-compatible response JSONL. No server, Node runtime or AI API is needed to use it. Generate slot B separately for the second reviewer. See [review instructions](docs/review-workbench.md).
+
+The agreement command requires completed selected-split pairs and explicit research attestation. It measures reviewer agreement and prepares pending adjudication items; it does not compute model accuracy or invent human labels. Genuine reviews and study results remain pending.
+
+`feature/review-workbench-evaluation` is stacked on the unmerged Phase 2 branch. Its pull request targets `feature/phase-2-task-exposure`; `main` is not changed by this work.

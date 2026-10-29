@@ -18,3 +18,30 @@ jobs:
         run: python scripts/check_foundation.py
       - name: Check schema, acquisition and ingestion contracts
         run: python -m unittest discover -s tests -v
+  browser-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Install pinned browser test dependency
+        run: npm ci
+      - name: Install Chromium and Linux dependencies
+        run: npx playwright install --with-deps chromium
+      - name: Build synthetic offline review fixture
+        run: python tests/workbench_fixture.py artifacts/ui-smoke/fixture.html
+      - name: Browser draft, response and mobile checks
+        run: npm run test:browser
+      - name: Validate browser-exported synthetic response with Python
+        run: python tests/check_browser_response.py artifacts/ui-smoke/output/synthetic-responses.jsonl
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: review-browser-smoke
+          path: artifacts/ui-smoke/output/
+          retention-days: 7

@@ -22,3 +22,10 @@
 - A completion validation failure on fresh blind queues is expected: their human labels are deliberately empty.
 - Lexical insufficient_evidence is not a low exposure result. Do not replace unknowns with zeros.
 - If grouped sampling cannot create a holdout, review the sampling design and create a new version; do not split duplicate-linked occupations to force the requested count.
+
+## Offline workbench and agreement
+- Open the generated HTML directly; it needs no server. Draft edits are tab memory, so download a draft backup before closing. JSONL response export intentionally leaves unfinished tasks blank.
+- Draft import checks the run and slot. Source identity and labels must match the frozen queue; changing task text is rejected.
+- A single reviewer slot must use one pseudonym consistently, and slots A/B must use different identities. This is a protocol check, not proof of independent human participation.
+- Agreement remains blocked without explicit research attestation and complete pairs for the selected split. Constant-marginal kappa is undefined and reported as null, never silently changed to one.
+- Node and Playwright are optional browser-test dependencies only. Install them with npm ci; use the pinned browser install from the review-workbench guide. If the runtime prohibits Chromium sockets, run the browser smoke check in the repository GitHub Actions environment. Do not interpret a failed browser launch as an application pass.

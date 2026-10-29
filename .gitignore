@@ -14,3 +14,4 @@ artifacts/
 *.sqlite
 *.sqlite3
 .pytest_cache/
+node_modules/
