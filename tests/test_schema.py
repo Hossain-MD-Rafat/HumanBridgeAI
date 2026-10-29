@@ -15,6 +15,7 @@ class SchemaTests(unittest.TestCase):
         self.db.executescript(
             (ROOT / "schema/001_initial.sql").read_text(encoding="utf-8")
         )
+        self.db.executescript((ROOT / "schema/002_source_detail.sql").read_text(encoding="utf-8"))
         self.db.execute(
             "INSERT INTO dataset_release VALUES (?, ?, ?, ?, ?, ?, ?)",
             ("r1", "fixture", "test", "https://example.test", "2026-10-29",
@@ -24,7 +25,7 @@ class SchemaTests(unittest.TestCase):
             "INSERT INTO occupation VALUES (?, ?, ?, ?, ?)",
             [("r1", code, "fixture", code, None) for code in ("A", "B", "C")],
         )
-        self.db.execute("INSERT INTO task VALUES ('r1', 'A', 't1', 'Fixture', NULL)")
+        self.db.execute("INSERT INTO task (release_id, occupation_code, task_id, statement, task_type) VALUES ('r1', 'A', 't1', 'Fixture', NULL)")
         self.db.execute(
             "INSERT INTO analysis_run VALUES ('run1', 'test', '2026-10-29', "
             "'2026-10-29', '{}')"
@@ -33,11 +34,11 @@ class SchemaTests(unittest.TestCase):
 
     def test_rejects_orphan_task(self) -> None:
         with self.assertRaises(sqlite3.IntegrityError):
-            self.db.execute("INSERT INTO task VALUES ('r1', 'missing', 't2', 'x', NULL)")
+            self.db.execute("INSERT INTO task (release_id, occupation_code, task_id, statement, task_type) VALUES ('r1', 'missing', 't2', 'x', NULL)")
 
     def test_rejects_duplicate_task(self) -> None:
         with self.assertRaises(sqlite3.IntegrityError):
-            self.db.execute("INSERT INTO task VALUES ('r1', 'A', 't1', 'x', NULL)")
+            self.db.execute("INSERT INTO task (release_id, occupation_code, task_id, statement, task_type) VALUES ('r1', 'A', 't1', 'x', NULL)")
 
     def test_score_range_and_unknown_state(self) -> None:
         sql = "INSERT INTO task_score VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
@@ -79,7 +80,7 @@ class SchemaTests(unittest.TestCase):
         with self.assertRaises(sqlite3.IntegrityError):
             self.db.execute(
                 "INSERT INTO occupation_element_rating VALUES "
-                "('r1', 'A', 'e1', 'unknown', '', 1, NULL)"
+                "('r1', 'A', 'e1', 'unknown', '', 1, NULL, '{}')"
             )
 
 

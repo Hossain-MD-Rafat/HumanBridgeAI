@@ -1,0 +1,54 @@
+{
+  "source_snapshot": "core-2026-10-29-v1",
+  "note": "Initial contrasting case studies, not a representative validation sample. Independent reviewers not assigned.",
+  "occupations": [
+    {
+      "occupation_code": "43-3031.00",
+      "title": "Bookkeeping, Accounting, and Auditing Clerks",
+      "task_count": 28,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "43-4051.00",
+      "title": "Customer Service Representatives",
+      "task_count": 13,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "15-1252.00",
+      "title": "Software Developers",
+      "task_count": 17,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "29-1141.00",
+      "title": "Registered Nurses",
+      "task_count": 27,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "25-2021.00",
+      "title": "Elementary School Teachers, Except Special Education",
+      "task_count": 38,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "47-2111.00",
+      "title": "Electricians",
+      "task_count": 21,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "47-1011.00",
+      "title": "First-Line Supervisors of Construction Trades and Extraction Workers",
+      "task_count": 15,
+      "review_status": "not_annotated"
+    },
+    {
+      "occupation_code": "15-2051.01",
+      "title": "Business Intelligence Analysts",
+      "task_count": 17,
+      "review_status": "not_annotated"
+    }
+  ]
+}

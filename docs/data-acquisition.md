@@ -1,4 +1,6 @@
 # Data acquisition runbook
+Core acquisition is complete for the pinned snapshot. Use [pipeline commands](running-pipeline.md) to reproduce it; the table below describes the original acquisition order. Actual raw files use checksum-addressed paths recorded in manifests.
+
 ## What to download first
 Download from official links in [the dataset guide](datasets.md); do not rename or edit the original bytes. Suggested destinations:
 
@@ -52,4 +54,4 @@ https://api.census.gov/data/2024/acs/acs5?get=NAME,B19013_001E,B19013_001M&for=c
 This template has not been executed in this session. Query other tables in documented batches and retain annotations/special-value flags. Filter to the study geography and retain FIPS leading zeros. Bulk downloads through official Census tools are an alternative; record the extraction selection and vintage.
 
 ## Download status and limitations
-No dataset payloads have been downloaded in Phase 0. Research tooling could inspect official source pages, but ZIP/XLSX binaries were not readable through that tool. Resolve failures via official landing pages or permitted manual downloads. Do not bypass blocks or silently substitute a newer vintage.
+Phase 0 source discovery did not download binary payloads. In Phase 1, all five core payloads were acquired through direct official downloads, inspected with openpyxl, and imported with integrity checks. The committed snapshot pins exact bytes. State/metro wage extensions and regional/optional datasets are still unacquired. Do not bypass blocks or silently substitute a newer vintage.

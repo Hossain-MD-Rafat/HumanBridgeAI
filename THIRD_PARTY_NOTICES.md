@@ -1,5 +1,5 @@
 # Third-party data and attribution
-No third-party datasets are bundled in this foundation.
+Raw third-party datasets are not bundled. Acquisition metadata and aggregate coverage reports are committed; raw assets and the derived local database are reconstructed with the pinned pipeline. Normalized data retain source provenance.
 
 ## O*NET
 The O*NET 31.0 Database is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
@@ -9,6 +9,8 @@ When using unmodified information:
 > This page includes information from the O*NET 31.0 Database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA). Used under the CC BY 4.0 license. O*NET® is a trademark of USDOL/ETA.
 
 When publishing transformed information, add a clear modifications notice and the source's non-endorsement statement. Attribute the actual release used. Crosswalk and other site content terms must be checked separately; the database license is not blanket permission for every linked resource.
+
+HumanBridge AI selects and normalizes O*NET records. USDOL/ETA has not approved, endorsed, or tested these modifications. The O*NET-SOC crosswalk is covered by the [Resource Center content guidance](https://www.onetcenter.org/license.html), reviewed separately during Phase 1. Preserve the original source credit, CC BY 4.0 link and modification notice. Work-style source provenance includes AI/Expert records; these are not independent HumanBridge human annotations.
 
 ## BLS
 [BLS linking/copyright information](https://www.bls.gov/bls/linksite.htm) describes public-domain information and credit requirements/recommendations. Cite the program, release, table and date; retain exceptions for any third-party content. Do not imply agency endorsement.

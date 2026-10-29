@@ -55,4 +55,4 @@ Every response includes dataset_snapshot, method_version, generated_at, warnings
 Run local first. Before deployment: container build, dependency lock, request limits, secret management, structured logs without personal content, health checks and rollback procedure. Monitor input schema drift, coverage changes and recommendation constraint failures. Re-evaluate methods after source or capability updates; do not silently replace snapshots.
 
 ## Repository structure
-The current repository contains foundation docs, config, DDL and checks. Planned modules under src/humanbridge: ingestion, validation, crosswalks, features, scoring, transitions, evaluation and api. Add each module with executable examples and focused tests when its phase starts. No placeholder service is claimed to run.
+The repository now contains acquisition, workbook parsing, O*NET/BLS importers, an atomic pipeline, source-detail migration and command-line exploration. Features, scoring, transitions, evaluation and API modules are later work. See running-pipeline.md for executable examples and tests. No service is claimed to run.

@@ -1,0 +1,2 @@
+# XLSX ingestion only. Foundation schema checks use the standard library.
+openpyxl==3.1.5

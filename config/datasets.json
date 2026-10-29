@@ -1,7 +1,7 @@
 {
   "catalog_version": 1,
   "research_date": "2026-10-29",
-  "note": "Source pages reviewed; binary files not acquired. Null license URLs mean review pending, not unrestricted rights.",
+  "note": "Core assets acquired and structurally validated; see core_snapshot.json and the generated coverage report. Regional and optional sources remain unacquired.",
   "datasets": [
     {
       "id": "onet_31_0",
@@ -30,10 +30,12 @@
         "No validated HumanBridge labels",
         "Release-specific schema must be inspected"
       ],
-      "acquisition_status": "not_downloaded",
+      "acquisition_status": "downloaded_structure_validated",
       "source_page_checked_on": "2026-10-29",
-      "binary_download_verified": false,
-      "sha256": null
+      "binary_download_verified": true,
+      "sha256": "c63ad00a8e45f3d3ef8e1529fcf8864d2279f2dfcb98737436818f5664781b04",
+      "manifest_path": "data/manifest/onet_31_0-c63ad00a8e45f3d3.json",
+      "observed_release": "31.0"
     },
     {
       "id": "bls_oews_2025",
@@ -64,10 +66,13 @@
         "Suppressed/top-coded values require handling",
         "Occupation estimates are not personal salary predictions"
       ],
-      "acquisition_status": "not_downloaded",
+      "acquisition_status": "downloaded_structure_validated",
       "source_page_checked_on": "2026-10-29",
-      "binary_download_verified": false,
-      "sha256": null
+      "binary_download_verified": true,
+      "sha256": "b5855a37f3e03e779f6fbf173d3bbc94aeeff33426aef32fa95ce6d025bab1af",
+      "manifest_path": "data/manifest/bls_oews_2025-b5855a37f3e03e77.json",
+      "observed_release": "May 2025",
+      "acquired_scope": "National file only; state and metro files not acquired"
     },
     {
       "id": "bls_projections_2025_2035",
@@ -94,10 +99,12 @@
         "Projections are not live vacancies",
         "Confirm workbook vintage after download"
       ],
-      "acquisition_status": "not_downloaded",
+      "acquisition_status": "downloaded_structure_validated",
       "source_page_checked_on": "2026-10-29",
-      "binary_download_verified": false,
-      "sha256": null
+      "binary_download_verified": true,
+      "sha256": "08ee182f992d972593e64559ce467bad75967d2228f11ad5e2f86d4ec0ee6c00",
+      "manifest_path": "data/manifest/bls_projections_2025_2035-08ee182f992d9725.json",
+      "observed_release": "2025-2035"
     },
     {
       "id": "onet_soc_crosswalk",
@@ -112,7 +119,7 @@
       ],
       "dictionary_url": "https://www.onetcenter.org/crosswalks.html",
       "license_url": "https://www.onetcenter.org/license.html",
-      "license_review_status": "Confirm crosswalk-specific site terms at acquisition",
+      "license_review_status": "O*NET Resource Center CC BY 4.0 content guidance; attribution and changes notice required",
       "keys": [
         "source taxonomy/code",
         "target taxonomy/code"
@@ -123,10 +130,12 @@
         "Mapping is not an employment allocation weight",
         "Confirm coverage against O*NET 31.0"
       ],
-      "acquisition_status": "not_downloaded",
+      "acquisition_status": "downloaded_structure_validated",
       "source_page_checked_on": "2026-10-29",
-      "binary_download_verified": false,
-      "sha256": null
+      "binary_download_verified": true,
+      "sha256": "bfc6722a92c2d607e5a99dee88b7826cf5aa91f7c0453182e0c8268e32a20a19",
+      "manifest_path": "data/manifest/onet_soc_crosswalk-bfc6722a92c2d607.json",
+      "observed_release": "O*NET-SOC 2019 to SOC 2018; acquired 2026-10-29"
     },
     {
       "id": "onet_nem_crosswalk",
@@ -151,10 +160,12 @@
       "limitations": [
         "Review one-to-many mappings and unmatched codes"
       ],
-      "acquisition_status": "not_downloaded",
+      "acquisition_status": "downloaded_structure_validated",
       "source_page_checked_on": "2026-10-29",
-      "binary_download_verified": false,
-      "sha256": null
+      "binary_download_verified": true,
+      "sha256": "cf3c6e6cf1198f9896a0e280c7503f6cc2202be0660d5decff9c4562c78556e3",
+      "manifest_path": "data/manifest/onet_nem_crosswalk-cf3c6e6cf1198f98.json",
+      "observed_release": "As of 08/27/2026"
     },
     {
       "id": "acs_2024_5year",

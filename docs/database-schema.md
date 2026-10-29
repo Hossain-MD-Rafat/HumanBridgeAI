@@ -20,7 +20,7 @@ The executable [SQLite DDL](../schema/001_initial.sql) defines a local research 
 | transition | Run + source/target | Ranked recommendations, constraints and explanation |
 
 ## Design boundaries
-- labor_statistic numeric values do not hold textual education or training categories. Add typed categorical source tables in Phase 1 once actual workbook headers are inspected.
+- labor_statistic numeric values do not hold textual education or training categories. Migration 002 stores these in preparation_requirement after inspection of the actual workbook headers.
 - Source taxonomy codes in crosswalk/labor tables deliberately need not exist in the O*NET occupation table. Validate their own source code sets during ingestion.
 - Importers must select or aggregate source rating populations explicitly; the current rating keys assume one selected source row per category. Extend the key if the dictionary requires additional dimensions.
 - Crosswalk weight sums, scale-specific value ranges, JSON structure, county geography types and rating quality rules require ingestion checks beyond these SQL constraints.
@@ -28,3 +28,6 @@ The executable [SQLite DDL](../schema/001_initial.sql) defines a local research 
 - A transition score has no fixed range until its baseline formula is defined. It is not a probability.
 - Task–activity edges, resource catalogs, annotations, experiment artifacts and consented knowledge records are later migrations. Do not force them into untyped personal free-text columns.
 - Full schema revisions must preserve source release identity and produce explicit migrations.
+
+## Phase 1 migration
+[Migration 002](../schema/002_source_detail.sql) adds source_metadata_json to task/rating tables; source_occupation and typed preparation_requirement for BLS; occupation_job_zone, related_occupation and occupation_alias for O*NET. These implement the actual inspected workbook contracts. Original source quality fields remain recoverable. Apply migrations in filename order; see [pipeline instructions](running-pipeline.md).

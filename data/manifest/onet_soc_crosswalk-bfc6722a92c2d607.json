@@ -1,0 +1,22 @@
+{
+  "dataset_id": "onet_soc_crosswalk",
+  "release": "Publisher mapping snapshot to acquire",
+  "publisher": "National Center for O*NET Development",
+  "landing_url": "https://www.onetcenter.org/crosswalks.html",
+  "resolved_download_url": "https://www.onetcenter.org/taxonomy/2019/soc/2019_to_SOC_Crosswalk.xlsx?fmt=xlsx",
+  "retrieved_at_utc": "2026-10-29T21:10:51.761858+00:00",
+  "local_relative_path": "data/raw/onet_soc_crosswalk/bfc6722a92c2d607e5a99dee88b7826cf5aa91f7c0453182e0c8268e32a20a19.xlsx",
+  "bytes": 44847,
+  "sha256": "bfc6722a92c2d607e5a99dee88b7826cf5aa91f7c0453182e0c8268e32a20a19",
+  "license_url": "https://www.onetcenter.org/license.html",
+  "license_review_status": "Confirm crosswalk-specific site terms at acquisition",
+  "dictionary_url": "https://www.onetcenter.org/crosswalks.html",
+  "coverage": "United States classifications",
+  "taxonomy": [
+    "source taxonomy/code",
+    "target taxonomy/code"
+  ],
+  "acquisition_method": "download",
+  "validation": "ZIP CRC and safe members; workbook container if applicable",
+  "notes": "Structural validation only; release labels require workbook review."
+}

@@ -49,11 +49,15 @@ def main() -> None:
         raise ValueError("Broken local documentation links: " + "; ".join(broken))
 
     with sqlite3.connect(":memory:") as connection:
-        connection.executescript(
-            (ROOT / "schema/001_initial.sql").read_text(encoding="utf-8")
-        )
+        for migration in sorted((ROOT / "schema").glob("*.sql")):
+            connection.executescript(migration.read_text(encoding="utf-8"))
         if connection.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("Schema foreign-key check failed")
+    snapshot = json.loads((ROOT / "config/core_snapshot.json").read_text(encoding="utf-8"))
+    for asset in snapshot["assets"]:
+        manifest = json.loads((ROOT / asset["manifest_path"]).read_text(encoding="utf-8"))
+        if manifest["dataset_id"] != asset["dataset_id"] or manifest["sha256"] != asset["sha256"]:
+            raise ValueError("Snapshot/manifest identity mismatch")
     print(f"Foundation checks passed: {len(datasets)} catalog entries; "
           "local documentation links; executable SQLite schema. "
           "No network or empirical validation performed.")

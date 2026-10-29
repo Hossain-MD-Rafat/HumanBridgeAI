@@ -1,0 +1,22 @@
+{
+  "dataset_id": "onet_nem_crosswalk",
+  "release": "Publisher mapping snapshot to acquire",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "landing_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+  "resolved_download_url": "https://www.bls.gov/emp/classifications-crosswalks/nem-onet-to-soc-crosswalk.xlsx",
+  "retrieved_at_utc": "2026-10-29T21:10:55.109949+00:00",
+  "local_relative_path": "data/raw/onet_nem_crosswalk/cf3c6e6cf1198f9896a0e280c7503f6cc2202be0660d5decff9c4562c78556e3.xlsx",
+  "bytes": 94441,
+  "sha256": "cf3c6e6cf1198f9896a0e280c7503f6cc2202be0660d5decff9c4562c78556e3",
+  "license_url": "https://www.bls.gov/bls/linksite.htm",
+  "license_review_status": "BLS public-domain guidance; retain attribution",
+  "dictionary_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+  "coverage": "United States classifications",
+  "taxonomy": [
+    "O*NET-SOC code",
+    "National Employment Matrix code"
+  ],
+  "acquisition_method": "download",
+  "validation": "ZIP CRC and safe members; workbook container if applicable",
+  "notes": "Structural validation only; release labels require workbook review."
+}

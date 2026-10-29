@@ -1,0 +1,24 @@
+{
+  "dataset_id": "bls_oews_2025",
+  "release": "May 2025",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "landing_url": "https://www.bls.gov/oes/tables.htm",
+  "resolved_download_url": "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+  "retrieved_at_utc": "2026-10-29T21:10:44.397409+00:00",
+  "local_relative_path": "data/raw/bls_oews_2025/b5855a37f3e03e779f6fbf173d3bbc94aeeff33426aef32fa95ce6d025bab1af.zip",
+  "bytes": 279525,
+  "sha256": "b5855a37f3e03e779f6fbf173d3bbc94aeeff33426aef32fa95ce6d025bab1af",
+  "license_url": "https://www.bls.gov/bls/linksite.htm",
+  "license_review_status": "BLS public-domain guidance; retain attribution and exceptions",
+  "dictionary_url": "https://www.bls.gov/oes/tables.htm",
+  "coverage": "National; state and metro/nonmetro extensions",
+  "taxonomy": [
+    "release",
+    "OCC_CODE",
+    "area type/code",
+    "industry/ownership where applicable"
+  ],
+  "acquisition_method": "download",
+  "validation": "ZIP CRC and safe members; workbook container if applicable",
+  "notes": "Structural validation only; release labels require workbook review."
+}

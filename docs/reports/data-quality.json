@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "core-2026-10-29-v1",
+  "occupations_with_tasks": 923,
+  "occupations_with_skill_ratings": 910,
+  "occupations_with_usable_mapped_median_wage": 956,
+  "foreign_key_violations": 0,
+  "logical_sha256": "f1803c473f428f073d9db267aa09ab602b6b0932a8ec1e5f5484d234dae8553f",
+  "note": "Source integrity and coverage checks; no empirical model validation."
+}

@@ -1,0 +1,24 @@
+{
+  "dataset_id": "onet_31_0",
+  "release": "31.0",
+  "publisher": "USDOL/ETA, National Center for O*NET Development",
+  "landing_url": "https://www.onetcenter.org/database.html",
+  "resolved_download_url": "https://www.onetcenter.org/dl_files/database/db_31_0_excel.zip",
+  "retrieved_at_utc": "2026-10-29T21:10:41.151248+00:00",
+  "local_relative_path": "data/raw/onet_31_0/c63ad00a8e45f3d3ef8e1529fcf8864d2279f2dfcb98737436818f5664781b04.zip",
+  "bytes": 47880800,
+  "sha256": "c63ad00a8e45f3d3ef8e1529fcf8864d2279f2dfcb98737436818f5664781b04",
+  "license_url": "https://www.onetcenter.org/license_db.html",
+  "license_review_status": "CC-BY-4.0; attribution and modifications notice required",
+  "dictionary_url": "https://www.onetcenter.org/dictionary/31.0/excel/",
+  "coverage": "United States occupational profiles",
+  "taxonomy": [
+    "release",
+    "O*NET-SOC Code",
+    "Task ID or Element ID",
+    "Scale ID where applicable"
+  ],
+  "acquisition_method": "download",
+  "validation": "ZIP CRC and safe members; workbook container if applicable",
+  "notes": "Structural validation only; release labels require workbook review."
+}

@@ -1,0 +1,23 @@
+{
+  "dataset_id": "bls_projections_2025_2035",
+  "release": "2025-2035",
+  "publisher": "U.S. Bureau of Labor Statistics",
+  "landing_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+  "resolved_download_url": "https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx",
+  "retrieved_at_utc": "2026-10-29T21:10:47.957032+00:00",
+  "local_relative_path": "data/raw/bls_projections_2025_2035/08ee182f992d972593e64559ce467bad75967d2228f11ad5e2f86d4ec0ee6c00.xlsx",
+  "bytes": 413524,
+  "sha256": "08ee182f992d972593e64559ce467bad75967d2228f11ad5e2f86d4ec0ee6c00",
+  "license_url": "https://www.bls.gov/bls/linksite.htm",
+  "license_review_status": "BLS public-domain guidance; retain attribution and exceptions",
+  "dictionary_url": "https://www.bls.gov/emp/documentation/definitions.htm",
+  "coverage": "National",
+  "taxonomy": [
+    "National Employment Matrix occupation code",
+    "base year",
+    "target year"
+  ],
+  "acquisition_method": "download",
+  "validation": "ZIP CRC and safe members; workbook container if applicable",
+  "notes": "Structural validation only; release labels require workbook review."
+}

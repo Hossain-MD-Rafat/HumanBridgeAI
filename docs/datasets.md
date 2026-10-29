@@ -1,5 +1,5 @@
 # Dataset inventory and source guide
-Research date: 2026-10-29. These are source recommendations, not downloaded assets. Release labels were checked against publisher pages; binary payloads, row counts and join coverage remain unverified.
+Research date: 2026-10-29. The five core assets have now been downloaded, checksum-pinned and ingested. [Observed coverage](reports/core-data.json), [source cards](data-cards/core-sources.md) and [run instructions](running-pipeline.md) supersede the initial acquisition-only status. Regional and optional assets remain unacquired.
 
 ## Start with these four source groups
 | Priority | Source / release | Why HumanBridge needs it | Access and join |
