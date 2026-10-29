@@ -15,3 +15,10 @@
 - Mutable publisher URLs may serve changed bytes. A locked download must fail rather than promote a new snapshot automatically.
 - A failed import does not replace the existing database. Review the traceback and source headers, apply the smallest adapter/schema fix, then rebuild with --replace.
 - Different OEWS and NEM employment totals can reflect different universes. Keep source units and self-employment coverage visible.
+
+## Phase 2 review pilot
+- Build the pinned core database before running prepare_task_pilot.py. A logical fingerprint mismatch means the source DB differs from the published report.
+- Run identities change when generator code, rubric, cohort or selected inputs change. Existing immutable artifacts must not be edited; copy blind queues to a separate response directory.
+- A completion validation failure on fresh blind queues is expected: their human labels are deliberately empty.
+- Lexical insufficient_evidence is not a low exposure result. Do not replace unknowns with zeros.
+- If grouped sampling cannot create a holdout, review the sampling design and create a new version; do not split duplicate-linked occupations to force the requested count.

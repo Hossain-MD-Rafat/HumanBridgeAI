@@ -1,0 +1,128 @@
+{
+  "run_id": "2f50657777212dcae013",
+  "method_version": "lexical-screen-v0.1.0",
+  "rubric_version": "task-review-v0.1.0",
+  "source_snapshot": "core-2026-10-29-v1",
+  "core_logical_sha256": "f1803c473f428f073d9db267aa09ab602b6b0932a8ec1e5f5484d234dae8553f",
+  "rubric_sha256": "117b17577cfe5ab2cd961009b9d601d2cefcd9044b214f996bcc78f50e6af5dd",
+  "cohort_sha256": "e4393136113c55fd813cd53482bb22a4e04d9799b7f6d49ffc4faf8a4e728655",
+  "engine_sha256": "b76e7799dc3a4b1854e7fb073bccabb705a277a82c5e5d815b36873f9c9b5205",
+  "capability_assumption_date": "2026-10-29",
+  "pilot": {
+    "sampling_version": "occupation-grouped-pilot-v0.1.0",
+    "seed": "humanbridge-pilot-v1",
+    "eligible_occupations": 900,
+    "selected_occupations": 20,
+    "selected_major_groups": 17,
+    "tasks_per_occupation": 10,
+    "selected_tasks": 200,
+    "development_occupations": [
+      "15-1252.00",
+      "15-2051.01",
+      "17-3021.00",
+      "19-2032.00",
+      "21-1014.00",
+      "25-2021.00",
+      "29-1141.00",
+      "33-3021.02",
+      "35-2011.00",
+      "37-2011.00",
+      "39-5012.00",
+      "43-3031.00",
+      "43-4051.00",
+      "47-1011.00",
+      "47-2111.00",
+      "49-9064.00"
+    ],
+    "holdout_occupations": [
+      "11-3111.00",
+      "27-1022.00",
+      "31-9011.00",
+      "45-4021.00"
+    ],
+    "occupation_groups": [
+      [
+        "11-3111.00"
+      ],
+      [
+        "15-1252.00"
+      ],
+      [
+        "15-2051.01"
+      ],
+      [
+        "17-3021.00"
+      ],
+      [
+        "19-2032.00"
+      ],
+      [
+        "21-1014.00"
+      ],
+      [
+        "25-2021.00"
+      ],
+      [
+        "27-1022.00"
+      ],
+      [
+        "29-1141.00"
+      ],
+      [
+        "31-9011.00"
+      ],
+      [
+        "33-3021.02"
+      ],
+      [
+        "35-2011.00"
+      ],
+      [
+        "37-2011.00"
+      ],
+      [
+        "39-5012.00"
+      ],
+      [
+        "43-3031.00"
+      ],
+      [
+        "43-4051.00"
+      ],
+      [
+        "45-4021.00"
+      ],
+      [
+        "47-1011.00"
+      ],
+      [
+        "47-2111.00"
+      ],
+      [
+        "49-9064.00"
+      ]
+    ],
+    "detected_duplicate_links": [],
+    "detected_cross_split_duplicate_links": 0,
+    "near_duplicate_jaccard": 0.85,
+    "limitations": [
+      "Purposive pilot, not a population-representative sample.",
+      "Duplicate audit covers selected texts; semantic leakage review remains pending.",
+      "This is a pilot holdout, not the final confirmatory test set."
+    ]
+  },
+  "development_machine_suggestions": 160,
+  "development_review_routes": {
+    "digital_assistance_review": 11,
+    "human_context_review": 15,
+    "insufficient_evidence": 112,
+    "manual_context_review": 22
+  },
+  "holdout_machine_suggestions": 0,
+  "blind_records_per_reviewer": 200,
+  "completed_human_reviews": 0,
+  "ai_exposure_scores_computed": 0,
+  "human_dependency_scores_computed": 0,
+  "performance_metrics": null,
+  "status": "prepared_for_independent_review_not_validated"
+}
