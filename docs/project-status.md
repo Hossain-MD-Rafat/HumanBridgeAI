@@ -40,7 +40,7 @@ No completed human reviews, agreement metrics, task-model accuracy, 0–100 expo
 - Added a self-contained offline review form per reviewer slot with local draft backup/resume and completed-only response export. Unfinished drafts remain blank in response files.
 - Added shared frozen-run/response verification, consistent reviewer-slot identity checks, gated nominal agreement diagnostics and pending adjudication output.
 - All assessment inputs start empty. No model suggestions, completed human labels or real study agreement statistics are supplied.
-- Python tests cover known-answer kappa, unknown/undefined handling, evidence gates, frozen-run integrity and safe blind HTML bundling. A synthetic Chromium round-trip test is configured in GitHub Actions; check the PR checks for its current result.
+- Python tests cover known-answer kappa, unknown/undefined handling, evidence gates, frozen-run integrity and safe blind HTML bundling. The synthetic Chromium round-trip test passed in GitHub Actions, including Python validation of the browser export. Desktop/mobile CI screenshots were inspected; source strings remain text and no horizontal overflow was detected. Check the PR checks for the latest commit result.
 - Local Chromium could not launch because this execution environment denies a required socket operation. No local browser visual verification is claimed; the GitHub browser job is the verification path.
 
 Next: review the stacked changes, assign the two independent reviewers, use the workbench to label tasks, validate returned files, then inspect agreement/disagreements before developing validated exposure/HVI scores.

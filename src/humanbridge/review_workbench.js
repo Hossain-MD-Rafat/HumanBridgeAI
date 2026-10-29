@@ -132,9 +132,10 @@
     try {
       const file = event.target.files[0]; if (!file) return;
       if (file.size > 10_000_000) throw new Error("Review file exceeds the 10 MB limit.");
-      const text = await file.text(); let records; let reviewer = "";
-      if (text.trim().startsWith("{\n") || text.trim().startsWith('{"format"')) {
-        const packet = JSON.parse(text);
+      const text = (await file.text()).trim(); let records; let reviewer = "";
+      let packet = null;
+      try { const candidate = JSON.parse(text); if (candidate?.format === "humanbridge-review-draft-v1") packet = candidate; } catch { /* JSONL is parsed below. */ }
+      if (packet) {
         if (!same(Object.keys(packet).sort(), ["format","run_id","slot","reviewer_id","records"].sort())) throw new Error("Unexpected draft wrapper fields.");
         if (packet.format !== "humanbridge-review-draft-v1" || packet.run_id !== payload.run_id || packet.slot !== payload.slot || typeof packet.reviewer_id !== "string") throw new Error("Draft belongs to another run or reviewer slot.");
         records = packet.records; reviewer = packet.reviewer_id;
