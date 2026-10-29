@@ -3,7 +3,7 @@
 
 HumanBridge AI is a research and engineering project that helps workers understand task-level AI exposure, recognize human capabilities, explore transferable skills, and plan realistic career transitions across the United States.
 
-**Status: Phase 1 core data pipeline complete.** Five source assets are acquired and pinned; a local database and command-line occupation explorer work. No trained models, production API, dashboard or validated HumanBridge scores exist yet. Numbers in the original concept remain illustrative, not research results.
+**Status: Phase 2 research tooling proposed on a feature branch.** The core data pipeline works. A versioned lexical review baseline and blind 200-task pilot are prepared; human validation is pending. No trained models, production API, dashboard or validated HumanBridge scores exist yet. Numbers in the original concept remain illustrative, not research results.
 
 ## Start here
 1. [Requirements and MVP](docs/requirements.md)
@@ -14,6 +14,7 @@ HumanBridge AI is a research and engineering project that helps workers understa
 6. [16-week roadmap](docs/roadmap.md)
 7. [Current status and next session](docs/project-status.md)
 8. [Run the data pipeline](docs/running-pipeline.md) and inspect the [coverage report](docs/reports/core-data.json)
+9. [Task review rubric](docs/task-rubric.md), [pilot instructions](docs/task-annotation-guide.md), and [pilot report](docs/reports/task-pilot.json)
 
 The [original master brain](docs/master-brain.md) records the owner's vision. Implementation decisions and current status live in the documents above.
 
@@ -70,3 +71,14 @@ Screenshots, a hosted demo, and a research paper will be added only when they ex
 - `tests/`: schema, acquisition and source-format tests
 - `docs/`: requirements, data, methodology, decisions, and roadmap
 - `data/`: local raw/interim/processed files, excluded from Git
+
+## Prepare the task-review pilot
+After building the core data:
+
+```bash
+python scripts/prepare_task_pilot.py
+```
+
+Expected: 200 tasks from 20 occupations across 17 major groups, two blind review queues, 160 development-only lexical suggestions and no holdout suggestions. All human labels and headline scores remain unset. The 40-task pilot holdout has a selected-text duplicate audit; semantic leakage review remains pending. See [annotation instructions](docs/task-annotation-guide.md).
+
+Phase 2 uses `feature/phase-2-task-exposure` and a pull request targeting `main`; implementation is separate from review and merge.

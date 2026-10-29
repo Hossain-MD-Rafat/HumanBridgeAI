@@ -6,6 +6,7 @@ Uses no network, data downloads or third-party dependencies.
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sqlite3
 from pathlib import Path
@@ -58,6 +59,24 @@ def main() -> None:
         manifest = json.loads((ROOT / asset["manifest_path"]).read_text(encoding="utf-8"))
         if manifest["dataset_id"] != asset["dataset_id"] or manifest["sha256"] != asset["sha256"]:
             raise ValueError("Snapshot/manifest identity mismatch")
+    rubric_path = ROOT / "config/task_rubric.json"
+    rubric = json.loads(rubric_path.read_text(encoding="utf-8"))
+    annotation_schema = json.loads((ROOT / "schema/task_annotation.schema.json").read_text(encoding="utf-8"))
+    if annotation_schema["properties"]["rubric_version"]["const"] != rubric["rubric_version"]:
+        raise ValueError("Annotation schema and rubric versions differ")
+    dimensions = {item["id"] for item in rubric["dimensions"]}
+    if set(annotation_schema["properties"]["dimension_ratings"]["properties"]) != dimensions:
+        raise ValueError("Annotation schema dimensions differ from rubric")
+    pilot = json.loads((ROOT / "docs/reports/task-pilot.json").read_text(encoding="utf-8"))
+    if pilot["rubric_sha256"] != hashlib.sha256(rubric_path.read_bytes()).hexdigest():
+        raise ValueError("Pilot report is stale for the current rubric")
+    engine = hashlib.sha256()
+    for name in ("src/humanbridge/task_screening.py", "src/humanbridge/pilot_sampling.py",
+                 "src/humanbridge/annotations.py", "scripts/prepare_task_pilot.py"):
+        engine.update(name.encode())
+        engine.update((ROOT / name).read_bytes())
+    if pilot["engine_sha256"] != engine.hexdigest():
+        raise ValueError("Pilot report is stale for the current generator code")
     print(f"Foundation checks passed: {len(datasets)} catalog entries; "
           "local documentation links; executable SQLite schema. "
           "No network or empirical validation performed.")

@@ -1,0 +1,404 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HumanBridge blind task review v0.1.0",
+  "description": "Runtime validation additionally verifies frozen task identity, substantive text and reviewer-pair independence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_key",
+    "release_id",
+    "occupation_code",
+    "occupation_title",
+    "task_id",
+    "task_text",
+    "rubric_version",
+    "capability_assumption_date",
+    "split",
+    "reviewer_slot",
+    "reviewer_id",
+    "review_status",
+    "dimension_ratings",
+    "exposure_label",
+    "workflow_label",
+    "rationale",
+    "evidence_references",
+    "context_notes",
+    "reviewed_at_utc"
+  ],
+  "properties": {
+    "task_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "release_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occupation_code": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occupation_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rubric_version": {
+      "const": "task-review-v0.1.0"
+    },
+    "capability_assumption_date": {
+      "const": "2026-10-29"
+    },
+    "split": {
+      "enum": [
+        "development",
+        "holdout"
+      ]
+    },
+    "reviewer_slot": {
+      "enum": [
+        "A",
+        "B"
+      ]
+    },
+    "reviewer_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "review_status": {
+      "enum": [
+        "unreviewed",
+        "completed"
+      ]
+    },
+    "dimension_ratings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "information_processing",
+        "language_generation",
+        "coding",
+        "analytical_support",
+        "interpersonal_context",
+        "physical_context",
+        "accountability",
+        "creative_judgment",
+        "cultural_context"
+      ],
+      "properties": {
+        "information_processing": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "language_generation": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "coding": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "analytical_support": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "interpersonal_context": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "physical_context": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "accountability": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "creative_judgment": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        },
+        "cultural_context": {
+          "enum": [
+            null,
+            "not_supported",
+            "supporting",
+            "central",
+            "insufficient_evidence"
+          ]
+        }
+      }
+    },
+    "exposure_label": {
+      "enum": [
+        null,
+        "not_supported",
+        "assistive_candidate",
+        "substantial_candidate",
+        "insufficient_evidence"
+      ]
+    },
+    "workflow_label": {
+      "enum": [
+        null,
+        "automation_candidate",
+        "augmentation_candidate",
+        "human_led",
+        "insufficient_evidence"
+      ]
+    },
+    "rationale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "context_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "reviewer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 20
+          },
+          "evidence_references": {
+            "minItems": 1
+          },
+          "reviewed_at_utc": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|\\+00:00)$"
+          },
+          "exposure_label": {
+            "enum": [
+              "not_supported",
+              "assistive_candidate",
+              "substantial_candidate",
+              "insufficient_evidence"
+            ]
+          },
+          "workflow_label": {
+            "enum": [
+              "automation_candidate",
+              "augmentation_candidate",
+              "human_led",
+              "insufficient_evidence"
+            ]
+          },
+          "dimension_ratings": {
+            "properties": {
+              "information_processing": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "language_generation": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "coding": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "analytical_support": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "interpersonal_context": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "physical_context": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "accountability": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "creative_judgment": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              },
+              "cultural_context": {
+                "enum": [
+                  "not_supported",
+                  "supporting",
+                  "central",
+                  "insufficient_evidence"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "reviewer_id": {
+            "const": null
+          },
+          "rationale": {
+            "const": null
+          },
+          "exposure_label": {
+            "const": null
+          },
+          "workflow_label": {
+            "const": null
+          },
+          "context_notes": {
+            "const": null
+          },
+          "reviewed_at_utc": {
+            "const": null
+          },
+          "evidence_references": {
+            "maxItems": 0
+          },
+          "dimension_ratings": {
+            "properties": {
+              "information_processing": {
+                "const": null
+              },
+              "language_generation": {
+                "const": null
+              },
+              "coding": {
+                "const": null
+              },
+              "analytical_support": {
+                "const": null
+              },
+              "interpersonal_context": {
+                "const": null
+              },
+              "physical_context": {
+                "const": null
+              },
+              "accountability": {
+                "const": null
+              },
+              "creative_judgment": {
+                "const": null
+              },
+              "cultural_context": {
+                "const": null
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

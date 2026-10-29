@@ -58,3 +58,6 @@ Predeclare operational acceptance thresholds after the annotation pilot and befo
 Freeze release IDs, acquisition dates, schema mappings, random seeds and split membership. Split by occupation for task models; use temporal cutoffs for outlook research. Do not evaluate against the same LLM labels used to train a model. External exposure benchmarks are comparisons, not displacement outcomes.
 
 Each experiment records ID, date, data hashes, features, method, parameters, split, metrics, artifacts and failure notes. Append results; never overwrite prior runs. No experiments or results are claimed at Phase 0.
+
+## Phase 2 implementation boundary
+The [task rubric](task-rubric.md) and [annotation guide](task-annotation-guide.md) implement a purposive 200-task pilot and a lexical evidence baseline. Exact spans are machine-generated cues, not exposure labels. Creative/cultural judgments remain manual-only. All scalar scores and performance metrics remain unset. The committed [pilot report](reports/task-pilot.json) records preparation counts only; independent review, adjudication and final confirmatory evaluation are pending.

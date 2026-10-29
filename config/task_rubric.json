@@ -1,0 +1,153 @@
+{
+  "rubric_version": "task-review-v0.1.0",
+  "method_version": "lexical-screen-v0.1.0",
+  "capability_assumption_date": "2026-10-29",
+  "capability_scope": "Research scenario: human-reviewed text/code/data assistance with lawful access to digital inputs; no autonomous physical execution, licensed authority, guaranteed quality or demonstrated time savings assumed.",
+  "status": "experimental_unvalidated",
+  "seed": "humanbridge-pilot-v1",
+  "pilot_occupations": 20,
+  "tasks_per_occupation": 10,
+  "minimum_holdout_occupations": 4,
+  "near_duplicate_jaccard": 0.85,
+  "dimensions": [
+    {
+      "id": "information_processing",
+      "family": "digital",
+      "question": "Does the task transform or retrieve documented information?"
+    },
+    {
+      "id": "language_generation",
+      "family": "digital",
+      "question": "Does the task create or revise language artifacts?"
+    },
+    {
+      "id": "coding",
+      "family": "digital",
+      "question": "Does the task create or maintain software code?"
+    },
+    {
+      "id": "analytical_support",
+      "family": "digital",
+      "question": "Does the task analyze documented quantitative information?"
+    },
+    {
+      "id": "interpersonal_context",
+      "family": "context",
+      "question": "Does execution depend on direct interaction, trust or negotiation?"
+    },
+    {
+      "id": "physical_context",
+      "family": "context",
+      "question": "Does execution require acting in the physical environment?"
+    },
+    {
+      "id": "accountability",
+      "family": "context",
+      "question": "Does the task explicitly invoke consequential judgment, safety or regulated responsibility?"
+    },
+    {
+      "id": "creative_judgment",
+      "family": "manual_only",
+      "question": "Does context support a specific need for human creative judgment?"
+    },
+    {
+      "id": "cultural_context",
+      "family": "manual_only",
+      "question": "Is contextual or cultural knowledge supported by evidence beyond a title or stereotype?"
+    }
+  ],
+  "guards": [
+    {
+      "id": "G01",
+      "reason": "negation_or_qualification",
+      "pattern": "\\b(?:not|never|without|avoid|prevent)\\b"
+    },
+    {
+      "id": "G02",
+      "reason": "safety_or_regulated_context",
+      "pattern": "\\b(?:patients?|clinical|medical|diagnos\\w*|prescrib\\w*|medicat\\w*|surger\\w*|emergenc\\w*|hazard\\w*|safety|legal advice)\\b"
+    }
+  ],
+  "rules": [
+    {
+      "id": "I01",
+      "dimension": "information_processing",
+      "pattern": "\\b(?:record|classify|compile|enter|process|verify|check)\\b.{0,80}\\b(?:data|records?|information|figures|documents?|transactions?|codes)\\b"
+    },
+    {
+      "id": "I02",
+      "dimension": "information_processing",
+      "pattern": "\\b(?:retrieve|search|summarize|organize)\\b.{0,80}\\b(?:data|records?|information|documents?|reports?)\\b"
+    },
+    {
+      "id": "L01",
+      "dimension": "language_generation",
+      "pattern": "\\b(?:write|draft|prepare|edit|revise|compose)\\b.{0,80}\\b(?:reports?|documents?|correspondence|letters?|manuals?|articles?|proposals?|instructions)\\b"
+    },
+    {
+      "id": "C01",
+      "dimension": "coding",
+      "pattern": "\\b(?:write|develop|debug|test|modify|maintain)\\b.{0,80}\\b(?:software|programs?|computer code|source code|applications?|scripts?)\\b"
+    },
+    {
+      "id": "A01",
+      "dimension": "analytical_support",
+      "pattern": "\\b(?:analyze|calculate|compare|estimate|forecast)\\b.{0,80}\\b(?:data|costs?|statistics|financial|trends?|budgets?|figures|quantities)\\b"
+    },
+    {
+      "id": "P01",
+      "dimension": "interpersonal_context",
+      "pattern": "\\b(?:negotiate|counsel|mentor|mediate|persuade|teach|instruct|interview)\\b"
+    },
+    {
+      "id": "P02",
+      "dimension": "interpersonal_context",
+      "pattern": "\\b(?:discuss|confer|communicate|consult|meet)\\b.{0,80}\\b(?:clients?|customers?|patients?|students?|employees?|staff|families|workers?)\\b"
+    },
+    {
+      "id": "F01",
+      "dimension": "physical_context",
+      "pattern": "\\b(?:install|repair|assemble|lift|carry|operate|clean|inspect)\\b.{0,80}\\b(?:equipment|machin\\w*|wiring|tools?|materials?|vehicles?|buildings?|structures|engines?)\\b"
+    },
+    {
+      "id": "F02",
+      "dimension": "physical_context",
+      "pattern": "\\b(?:administer|dress|position|transport|examine)\\b.{0,60}\\b(?:patients?|wounds?|medication|injections?)\\b"
+    },
+    {
+      "id": "J01",
+      "dimension": "accountability",
+      "pattern": "\\b(?:comply|compliance|regulations?|ethical|safety|legal responsibility|authorize|approve)\\b"
+    }
+  ],
+  "human_dimension_labels": [
+    "not_supported",
+    "supporting",
+    "central",
+    "insufficient_evidence"
+  ],
+  "human_exposure_labels": [
+    "not_supported",
+    "assistive_candidate",
+    "substantial_candidate",
+    "insufficient_evidence"
+  ],
+  "human_workflow_labels": [
+    "automation_candidate",
+    "augmentation_candidate",
+    "human_led",
+    "insufficient_evidence"
+  ],
+  "methodology_references": [
+    {
+      "id": "eloundou-2023",
+      "url": "https://arxiv.org/abs/2303.10130v5",
+      "use": "Task-based exposure methodology; historical assumptions, not validation of this lexical screen."
+    },
+    {
+      "id": "ilo-wp140-2025",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "use": "Task-level, worker/expert-informed assessment; no scores or labels imported."
+    }
+  ]
+}
