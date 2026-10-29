@@ -1,0 +1,310 @@
+{
+  "catalog_version": 1,
+  "research_date": "2026-10-29",
+  "note": "Source pages reviewed; binary files not acquired. Null license URLs mean review pending, not unrestricted rights.",
+  "datasets": [
+    {
+      "id": "onet_31_0",
+      "name": "O*NET occupation, task and skill database",
+      "phase": "MVP",
+      "release": "31.0",
+      "reference_period": "August 2026 release",
+      "publisher": "USDOL/ETA, National Center for O*NET Development",
+      "landing_url": "https://www.onetcenter.org/database.html",
+      "download_urls": [
+        "https://www.onetcenter.org/dl_files/database/db_31_0_excel.zip"
+      ],
+      "dictionary_url": "https://www.onetcenter.org/dictionary/31.0/excel/",
+      "license_url": "https://www.onetcenter.org/license_db.html",
+      "license_review_status": "CC-BY-4.0; attribution and modifications notice required",
+      "keys": [
+        "release",
+        "O*NET-SOC Code",
+        "Task ID or Element ID",
+        "Scale ID where applicable"
+      ],
+      "geography": "United States occupational profiles",
+      "access": "public bulk download; no API key for archive",
+      "limitations": [
+        "Not personal skill measurements",
+        "No validated HumanBridge labels",
+        "Release-specific schema must be inspected"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "bls_oews_2025",
+      "name": "BLS Occupational Employment and Wage Statistics",
+      "phase": "MVP",
+      "release": "May 2025",
+      "reference_period": "May 2025 estimates",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "landing_url": "https://www.bls.gov/oes/tables.htm",
+      "download_urls": [
+        "https://www.bls.gov/oes/special-requests/oesm25nat.zip",
+        "https://www.bls.gov/oes/special-requests/oesm25st.zip",
+        "https://www.bls.gov/oes/special-requests/oesm25ma.zip"
+      ],
+      "dictionary_url": "https://www.bls.gov/oes/tables.htm",
+      "license_url": "https://www.bls.gov/bls/linksite.htm",
+      "license_review_status": "BLS public-domain guidance; retain attribution and exceptions",
+      "keys": [
+        "release",
+        "OCC_CODE",
+        "area type/code",
+        "industry/ownership where applicable"
+      ],
+      "geography": "National; state and metro/nonmetro extensions",
+      "access": "public bulk download",
+      "limitations": [
+        "Standard tables are not every-county detailed occupation data",
+        "Suppressed/top-coded values require handling",
+        "Occupation estimates are not personal salary predictions"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "bls_projections_2025_2035",
+      "name": "BLS occupational employment projections",
+      "phase": "MVP",
+      "release": "2025-2035",
+      "reference_period": "2025 base / 2035 projected",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "landing_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+      "download_urls": [
+        "https://www.bls.gov/emp/ind-occ-matrix/occupation.xlsx"
+      ],
+      "dictionary_url": "https://www.bls.gov/emp/documentation/definitions.htm",
+      "license_url": "https://www.bls.gov/bls/linksite.htm",
+      "license_review_status": "BLS public-domain guidance; retain attribution and exceptions",
+      "keys": [
+        "National Employment Matrix occupation code",
+        "base year",
+        "target year"
+      ],
+      "geography": "National",
+      "access": "public workbook; URL may change in place",
+      "limitations": [
+        "Projections are not live vacancies",
+        "Confirm workbook vintage after download"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "onet_soc_crosswalk",
+      "name": "O*NET-SOC 2019 to SOC 2018 crosswalk",
+      "phase": "MVP",
+      "release": "Publisher mapping snapshot to acquire",
+      "reference_period": "2019 O*NET-SOC / 2018 SOC",
+      "publisher": "National Center for O*NET Development",
+      "landing_url": "https://www.onetcenter.org/crosswalks.html",
+      "download_urls": [
+        "https://www.onetcenter.org/taxonomy/2019/soc/2019_to_SOC_Crosswalk.xlsx?fmt=xlsx"
+      ],
+      "dictionary_url": "https://www.onetcenter.org/crosswalks.html",
+      "license_url": "https://www.onetcenter.org/license.html",
+      "license_review_status": "Confirm crosswalk-specific site terms at acquisition",
+      "keys": [
+        "source taxonomy/code",
+        "target taxonomy/code"
+      ],
+      "geography": "United States classifications",
+      "access": "public workbook",
+      "limitations": [
+        "Mapping is not an employment allocation weight",
+        "Confirm coverage against O*NET 31.0"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "onet_nem_crosswalk",
+      "name": "O*NET to National Employment Matrix crosswalk",
+      "phase": "MVP",
+      "release": "Publisher mapping snapshot to acquire",
+      "reference_period": "Confirm workbook taxonomy and vintage",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "landing_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+      "download_urls": [
+        "https://www.bls.gov/emp/classifications-crosswalks/nem-onet-to-soc-crosswalk.xlsx"
+      ],
+      "dictionary_url": "https://www.bls.gov/emp/data/occupational-data.htm",
+      "license_url": "https://www.bls.gov/bls/linksite.htm",
+      "license_review_status": "BLS public-domain guidance; retain attribution",
+      "keys": [
+        "O*NET-SOC code",
+        "National Employment Matrix code"
+      ],
+      "geography": "United States classifications",
+      "access": "public workbook",
+      "limitations": [
+        "Review one-to-many mappings and unmatched codes"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "acs_2024_5year",
+      "name": "ACS 2024 5-year detailed tables",
+      "phase": "Regional extension",
+      "release": "2024 ACS 5-year",
+      "reference_period": "2020-2024 pooled estimates",
+      "publisher": "U.S. Census Bureau",
+      "landing_url": "https://www.census.gov/data/developers/data-sets/acs-5year.html",
+      "download_urls": [],
+      "dictionary_url": "https://api.census.gov/data/2024/acs/acs5/groups.html",
+      "license_url": null,
+      "license_review_status": "Record official public-use notices at acquisition",
+      "keys": [
+        "state FIPS",
+        "county FIPS",
+        "table variable",
+        "estimate/MOE",
+        "vintage"
+      ],
+      "geography": "Counties; initial study 50 states plus DC",
+      "access": "Census API key required per current documentation; official bulk alternatives",
+      "tables": [
+        "B24010",
+        "B15003",
+        "B19013",
+        "B17001",
+        "B23025",
+        "B28002"
+      ],
+      "limitations": [
+        "Coarse occupation categories",
+        "MOEs and special values",
+        "Resident-based composition",
+        "Subscription is not physical broadband availability"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "census_counties_2024",
+      "name": "Census cartographic county boundaries",
+      "phase": "Regional extension",
+      "release": "2024",
+      "reference_period": "2024 geography; reconcile against ACS metadata",
+      "publisher": "U.S. Census Bureau",
+      "landing_url": "https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html",
+      "download_urls": [],
+      "dictionary_url": "https://www.census.gov/geographies/mapping-files/2024/geo/carto-boundary-file.html",
+      "license_url": null,
+      "license_review_status": "Record official public-use notices at acquisition",
+      "keys": [
+        "GEOID",
+        "boundary vintage"
+      ],
+      "geography": "U.S. counties and equivalents",
+      "access": "public bulk geography download; choose simplified county layer",
+      "limitations": [
+        "County-equivalent changes need reconciliation",
+        "No economic measurements"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "ipeds_training",
+      "name": "IPEDS institution and program data",
+      "phase": "Regional extension",
+      "release": "Select aligned survey years at acquisition",
+      "reference_period": "Not pinned yet",
+      "publisher": "NCES",
+      "landing_url": "https://nces.ed.gov/ipeds/use-the-data",
+      "download_urls": [],
+      "dictionary_url": "https://nces.ed.gov/ipeds/use-the-data",
+      "license_url": null,
+      "license_review_status": "Review release-specific public-use terms and suppression",
+      "keys": [
+        "UNITID",
+        "CIP code",
+        "survey year"
+      ],
+      "geography": "Institution locations / program records",
+      "access": "public download tools",
+      "limitations": [
+        "Completions are not available course seats",
+        "CIP-SOC mapping and accessibility validation needed"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "aioe_benchmark",
+      "name": "Felten-Raj-Seamans AIOE",
+      "phase": "Optional research",
+      "release": "Pin repository commit before use",
+      "reference_period": "Historical AI exposure; variant-dependent",
+      "publisher": "Felten, Raj and Seamans",
+      "landing_url": "https://github.com/AIOE-Data/AIOE",
+      "download_urls": [],
+      "dictionary_url": "https://github.com/AIOE-Data/AIOE/blob/main/README.md",
+      "license_url": null,
+      "license_review_status": "Explicit redistribution permission unresolved; do not vendor",
+      "keys": [
+        "SOC code",
+        "benchmark variant"
+      ],
+      "geography": "Occupation; industry and county variants",
+      "access": "public repository; terms review required",
+      "limitations": [
+        "Not displacement labels",
+        "Taxonomy and capability date may differ"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    },
+    {
+      "id": "gpts_benchmark",
+      "name": "GPTs-are-GPTs exposure ratings",
+      "phase": "Optional research",
+      "release": "Pin repository commit before use",
+      "reference_period": "Historical LLM exposure study",
+      "publisher": "Study authors / OpenAI repository",
+      "landing_url": "https://github.com/openai/GPTs-are-GPTs",
+      "download_urls": [],
+      "dictionary_url": "https://github.com/openai/GPTs-are-GPTs/blob/main/README.md",
+      "license_url": "https://github.com/openai/GPTs-are-GPTs/blob/main/LICENSE",
+      "license_review_status": "Repository MIT; underlying assets need separate notice review",
+      "keys": [
+        "occupation code",
+        "rating source",
+        "exposure variant"
+      ],
+      "geography": "Occupation",
+      "access": "public repository",
+      "limitations": [
+        "Historical assumptions",
+        "Not ground truth for present capability or displacement"
+      ],
+      "acquisition_status": "not_downloaded",
+      "source_page_checked_on": "2026-10-29",
+      "binary_download_verified": false,
+      "sha256": null
+    }
+  ]
+}
