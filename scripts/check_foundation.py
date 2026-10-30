@@ -77,6 +77,20 @@ def main() -> None:
         engine.update((ROOT / name).read_bytes())
     if pilot["engine_sha256"] != engine.hexdigest():
         raise ValueError("Pilot report is stale for the current generator code")
+    transition_path = ROOT / "config/skill_transition.json"
+    transition_config = json.loads(transition_path.read_text(encoding="utf-8"))
+    transition_audit = json.loads((ROOT / "docs/reports/skill-transition-audit.json").read_text(encoding="utf-8"))
+    if transition_audit["config_sha256"] != hashlib.sha256(transition_path.read_bytes()).hexdigest():
+        raise ValueError("Skill-transition audit is stale for the current config")
+    transition_engine = hashlib.sha256()
+    for name in ("src/humanbridge/skill_transitions.py", "src/humanbridge/transition_data.py",
+                 "scripts/recommend_transitions.py", "scripts/audit_skill_transitions.py"):
+        transition_engine.update(name.encode())
+        transition_engine.update((ROOT / name).read_bytes())
+    if transition_audit["audit_engine_sha256"] != transition_engine.hexdigest():
+        raise ValueError("Skill-transition audit is stale for the current code")
+    if transition_audit["coverage"]["source_snapshot"] != transition_config["source_snapshot"]:
+        raise ValueError("Skill-transition audit belongs to another source snapshot")
     print(f"Foundation checks passed: {len(datasets)} catalog entries; "
           "local documentation links; executable SQLite schema. "
           "No network or empirical validation performed.")

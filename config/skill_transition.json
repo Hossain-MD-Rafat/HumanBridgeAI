@@ -1,0 +1,78 @@
+{
+  "method_version": "occupation-skill-cosine-v0.1.0",
+  "source_snapshot": "core-2026-10-29-v1",
+  "importance_scale_id": "IM",
+  "importance_minimum": 1,
+  "importance_maximum": 5,
+  "expected_skill_dimensions": 35,
+  "maximum_results": 5,
+  "explanation_skills": 5,
+  "education_categories": [
+    "No formal educational credential",
+    "High school diploma or equivalent",
+    "Some college, no degree",
+    "Postsecondary nondegree award",
+    "Associate's degree",
+    "Bachelor's degree",
+    "Master's degree",
+    "Doctoral or professional degree"
+  ],
+  "ranking_inputs": [
+    "complete_unsuppressed_occupation_skill_importance"
+  ],
+  "not_used_for_ranking": [
+    "wages",
+    "education",
+    "employment_growth",
+    "AI_exposure",
+    "HVI",
+    "personal_attributes"
+  ],
+  "limitations": [
+    "Cosine similarity is not percentage skill overlap, transition success probability or personal qualification.",
+    "Education and national wage filters are source-data screens, not verified career feasibility.",
+    "Licensing, local demand, training time/cost and personal skills remain unverified."
+  ],
+  "feature_ids": [
+    "2.A.1.a",
+    "2.A.1.b",
+    "2.A.1.c",
+    "2.A.1.d",
+    "2.A.1.e",
+    "2.A.1.f",
+    "2.A.2.a",
+    "2.A.2.b",
+    "2.A.2.c",
+    "2.A.2.d",
+    "2.B.1.a",
+    "2.B.1.b",
+    "2.B.1.c",
+    "2.B.1.d",
+    "2.B.1.e",
+    "2.B.1.f",
+    "2.B.2.i",
+    "2.B.3.a",
+    "2.B.3.b",
+    "2.B.3.c",
+    "2.B.3.d",
+    "2.B.3.e",
+    "2.B.3.g",
+    "2.B.3.h",
+    "2.B.3.j",
+    "2.B.3.k",
+    "2.B.3.l",
+    "2.B.3.m",
+    "2.B.4.e",
+    "2.B.4.g",
+    "2.B.4.h",
+    "2.B.5.a",
+    "2.B.5.b",
+    "2.B.5.c",
+    "2.B.5.d"
+  ],
+  "related_experience_categories": [
+    "5 years or more",
+    "Less than 5 years",
+    "None"
+  ]
+}

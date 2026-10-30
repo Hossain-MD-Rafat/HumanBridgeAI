@@ -1,0 +1,1860 @@
+{
+  "audit_engine_sha256": "8bd306d4ac80fe01d05be7e96b2b3e4ae1da2d47c8f90403b0c1378760638963",
+  "case_studies": [
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.897878763266879,
+            "entry_education": "Some college, no degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1232"
+            ],
+            "median_annual_wage": 61860.0,
+            "occupation_code": "15-1232.00",
+            "related_experience": "None",
+            "title": "Computer User Support Specialists"
+          }
+        ],
+        "eligible_after_filters": 1,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 604,
+          "median_retention_unavailable_or_below_threshold": 304
+        },
+        "request": {
+          "allowed_education": [
+            "Some college, no degree"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "43-3031.00",
+      "source_title": "Bookkeeping, Accounting, and Auditing Clerks",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9856091718311201,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4011"
+            ],
+            "median_annual_wage": 65750.0,
+            "occupation_code": "43-4011.00",
+            "related_experience": "None",
+            "title": "Brokerage Clerks"
+          },
+          {
+            "cosine_similarity": 0.9853913175609419,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-3061"
+            ],
+            "median_annual_wage": 50580.0,
+            "occupation_code": "43-3061.00",
+            "related_experience": "None",
+            "title": "Procurement Clerks"
+          },
+          {
+            "cosine_similarity": 0.9850023019653847,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "13-2011"
+            ],
+            "median_annual_wage": 83680.0,
+            "occupation_code": "13-2011.00",
+            "related_experience": "None",
+            "title": "Accountants and Auditors"
+          },
+          {
+            "cosine_similarity": 0.9834232090316509,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "13-2053"
+            ],
+            "median_annual_wage": 81370.0,
+            "occupation_code": "13-2053.00",
+            "related_experience": "None",
+            "title": "Insurance Underwriters"
+          },
+          {
+            "cosine_similarity": 0.9831172637339249,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "11-3031"
+            ],
+            "median_annual_wage": 166570.0,
+            "occupation_code": "11-3031.00",
+            "related_experience": "5 years or more",
+            "title": "Financial Managers"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9897004210197788,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4111"
+            ],
+            "median_annual_wage": 45920.0,
+            "occupation_code": "43-4111.00",
+            "related_experience": "None",
+            "title": "Interviewers, Except Eligibility and Loan"
+          },
+          {
+            "cosine_similarity": 0.9852278012840242,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "41-3041"
+            ],
+            "median_annual_wage": 50160.0,
+            "occupation_code": "41-3041.00",
+            "related_experience": "None",
+            "title": "Travel Agents"
+          },
+          {
+            "cosine_similarity": 0.9850252090763603,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4141"
+            ],
+            "median_annual_wage": 47670.0,
+            "occupation_code": "43-4141.00",
+            "related_experience": "None",
+            "title": "New Accounts Clerks"
+          },
+          {
+            "cosine_similarity": 0.9847045653351452,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "41-3091"
+            ],
+            "median_annual_wage": 69990.0,
+            "occupation_code": "41-3091.00",
+            "related_experience": "None",
+            "title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel"
+          },
+          {
+            "cosine_similarity": 0.982180492307104,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "41-3021"
+            ],
+            "median_annual_wage": 62280.0,
+            "occupation_code": "41-3021.00",
+            "related_experience": "None",
+            "title": "Insurance Sales Agents"
+          }
+        ],
+        "eligible_after_filters": 199,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 488,
+          "median_retention_unavailable_or_below_threshold": 175,
+          "related_experience_unavailable_or_not_allowed": 47
+        },
+        "request": {
+          "allowed_education": [
+            "High school diploma or equivalent"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "43-4051.00",
+      "source_title": "Customer Service Representatives",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9897004210197788,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4111"
+            ],
+            "median_annual_wage": 45920.0,
+            "occupation_code": "43-4111.00",
+            "related_experience": "None",
+            "title": "Interviewers, Except Eligibility and Loan"
+          },
+          {
+            "cosine_similarity": 0.9892279151632649,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4181"
+            ],
+            "median_annual_wage": 44390.0,
+            "occupation_code": "43-4181.00",
+            "related_experience": "None",
+            "title": "Reservation and Transportation Ticket Agents and Travel Clerks"
+          },
+          {
+            "cosine_similarity": 0.9855534708343139,
+            "entry_education": "Associate's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "43-4161"
+            ],
+            "median_annual_wage": 50610.0,
+            "occupation_code": "43-4161.00",
+            "related_experience": "None",
+            "title": "Human Resources Assistants, Except Payroll and Timekeeping"
+          },
+          {
+            "cosine_similarity": 0.9852278012840242,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "41-3041"
+            ],
+            "median_annual_wage": 50160.0,
+            "occupation_code": "41-3041.00",
+            "related_experience": "None",
+            "title": "Travel Agents"
+          },
+          {
+            "cosine_similarity": 0.9850564940907469,
+            "entry_education": "Postsecondary nondegree award",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-2099"
+            ],
+            "median_annual_wage": 50290.0,
+            "occupation_code": "29-2099.08",
+            "related_experience": "None",
+            "title": "Patient Representatives"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9726670275770806,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "17-2061"
+            ],
+            "median_annual_wage": 161740.0,
+            "occupation_code": "17-2061.00",
+            "related_experience": "None",
+            "title": "Computer Hardware Engineers"
+          },
+          {
+            "cosine_similarity": 0.9543658447497912,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "17-2171"
+            ],
+            "median_annual_wage": 144910.0,
+            "occupation_code": "17-2171.00",
+            "related_experience": "None",
+            "title": "Petroleum Engineers"
+          },
+          {
+            "cosine_similarity": 0.9439177299383256,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-2036"
+            ],
+            "median_annual_wage": 147470.0,
+            "occupation_code": "29-2036.00",
+            "related_experience": "None",
+            "title": "Medical Dosimetrists"
+          }
+        ],
+        "eligible_after_filters": 3,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 33,
+          "median_retention_unavailable_or_below_threshold": 847,
+          "related_experience_unavailable_or_not_allowed": 26
+        },
+        "request": {
+          "allowed_education": [
+            "Bachelor's degree"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "15-1252.00",
+      "source_title": "Software Developers",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9896558709481628,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1254"
+            ],
+            "median_annual_wage": 92650.0,
+            "occupation_code": "15-1254.00",
+            "related_experience": "None",
+            "title": "Web Developers"
+          },
+          {
+            "cosine_similarity": 0.9855124268537151,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1243"
+            ],
+            "median_annual_wage": 139500.0,
+            "occupation_code": "15-1243.00",
+            "related_experience": "Less than 5 years",
+            "title": "Database Architects"
+          },
+          {
+            "cosine_similarity": 0.9845759401383507,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1211"
+            ],
+            "median_annual_wage": 105850.0,
+            "occupation_code": "15-1211.00",
+            "related_experience": "None",
+            "title": "Computer Systems Analysts"
+          },
+          {
+            "cosine_similarity": 0.9842291339586664,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1241"
+            ],
+            "median_annual_wage": 134050.0,
+            "occupation_code": "15-1241.00",
+            "related_experience": "5 years or more",
+            "title": "Computer Network Architects"
+          },
+          {
+            "cosine_similarity": 0.9841517187167088,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-1299"
+            ],
+            "median_annual_wage": 116580.0,
+            "occupation_code": "15-1299.07",
+            "related_experience": "None",
+            "title": "Blockchain Engineers"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9957678033037419,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1141"
+            ],
+            "median_annual_wage": 97550.0,
+            "occupation_code": "29-1141.01",
+            "related_experience": "None",
+            "title": "Acute Care Nurses"
+          },
+          {
+            "cosine_similarity": 0.9926078406616416,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1141"
+            ],
+            "median_annual_wage": 97550.0,
+            "occupation_code": "29-1141.03",
+            "related_experience": "None",
+            "title": "Critical Care Nurses"
+          },
+          {
+            "cosine_similarity": 0.9864005993683029,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-2036"
+            ],
+            "median_annual_wage": 147470.0,
+            "occupation_code": "29-2036.00",
+            "related_experience": "None",
+            "title": "Medical Dosimetrists"
+          },
+          {
+            "cosine_similarity": 0.9848495802699717,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1141"
+            ],
+            "median_annual_wage": 97550.0,
+            "occupation_code": "29-1141.04",
+            "related_experience": "None",
+            "title": "Clinical Nurse Specialists"
+          },
+          {
+            "cosine_similarity": 0.9832498656930272,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "17-2111"
+            ],
+            "median_annual_wage": 115160.0,
+            "occupation_code": "17-2111.00",
+            "related_experience": "None",
+            "title": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors"
+          }
+        ],
+        "eligible_after_filters": 79,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 89,
+          "median_retention_unavailable_or_below_threshold": 696,
+          "related_experience_unavailable_or_not_allowed": 45
+        },
+        "request": {
+          "allowed_education": [
+            "Bachelor's degree"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "29-1141.00",
+      "source_title": "Registered Nurses",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9957678033037419,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1141"
+            ],
+            "median_annual_wage": 97550.0,
+            "occupation_code": "29-1141.01",
+            "related_experience": "None",
+            "title": "Acute Care Nurses"
+          },
+          {
+            "cosine_similarity": 0.9926078406616416,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1141"
+            ],
+            "median_annual_wage": 97550.0,
+            "occupation_code": "29-1141.03",
+            "related_experience": "None",
+            "title": "Critical Care Nurses"
+          },
+          {
+            "cosine_similarity": 0.9914030531471599,
+            "entry_education": "Master's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-1161"
+            ],
+            "median_annual_wage": 134040.0,
+            "occupation_code": "29-1161.00",
+            "related_experience": "None",
+            "title": "Nurse Midwives"
+          },
+          {
+            "cosine_similarity": 0.9911490183343193,
+            "entry_education": "Master's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-9091"
+            ],
+            "median_annual_wage": 62520.0,
+            "occupation_code": "29-9091.00",
+            "related_experience": "None",
+            "title": "Athletic Trainers"
+          },
+          {
+            "cosine_similarity": 0.9909795088820476,
+            "entry_education": "Postsecondary nondegree award",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-2061"
+            ],
+            "median_annual_wage": 64400.0,
+            "occupation_code": "29-2061.00",
+            "related_experience": "None",
+            "title": "Licensed Practical and Licensed Vocational Nurses"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9947107312512673,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2058"
+            ],
+            "median_annual_wage": 74260.0,
+            "occupation_code": "25-2058.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Secondary School"
+          },
+          {
+            "cosine_similarity": 0.9926558407888741,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2031"
+            ],
+            "median_annual_wage": 72040.0,
+            "occupation_code": "25-2031.00",
+            "related_experience": "None",
+            "title": "Secondary School Teachers, Except Special and Career/Technical Education"
+          },
+          {
+            "cosine_similarity": 0.9919172153796634,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2057"
+            ],
+            "median_annual_wage": 66810.0,
+            "occupation_code": "25-2057.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Middle School"
+          },
+          {
+            "cosine_similarity": 0.9909387084931087,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2022"
+            ],
+            "median_annual_wage": 64370.0,
+            "occupation_code": "25-2022.00",
+            "related_experience": "None",
+            "title": "Middle School Teachers, Except Special and Career/Technical Education"
+          },
+          {
+            "cosine_similarity": 0.9905839430306619,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2051"
+            ],
+            "median_annual_wage": 64830.0,
+            "occupation_code": "25-2051.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Preschool"
+          }
+        ],
+        "eligible_after_filters": 152,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 235,
+          "median_retention_unavailable_or_below_threshold": 459,
+          "related_experience_unavailable_or_not_allowed": 63
+        },
+        "request": {
+          "allowed_education": [
+            "Bachelor's degree"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "25-2021.00",
+      "source_title": "Elementary School Teachers, Except Special Education",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9947107312512673,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2058"
+            ],
+            "median_annual_wage": 74260.0,
+            "occupation_code": "25-2058.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Secondary School"
+          },
+          {
+            "cosine_similarity": 0.9939074903968853,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2055"
+            ],
+            "median_annual_wage": null,
+            "occupation_code": "25-2055.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Kindergarten"
+          },
+          {
+            "cosine_similarity": 0.9936447302214871,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2023"
+            ],
+            "median_annual_wage": 65030.0,
+            "occupation_code": "25-2023.00",
+            "related_experience": "Less than 5 years",
+            "title": "Career/Technical Education Teachers, Middle School"
+          },
+          {
+            "cosine_similarity": 0.9926558407888741,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2031"
+            ],
+            "median_annual_wage": 72040.0,
+            "occupation_code": "25-2031.00",
+            "related_experience": "None",
+            "title": "Secondary School Teachers, Except Special and Career/Technical Education"
+          },
+          {
+            "cosine_similarity": 0.9919172153796634,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "25-2057"
+            ],
+            "median_annual_wage": 66810.0,
+            "occupation_code": "25-2057.00",
+            "related_experience": "None",
+            "title": "Special Education Teachers, Middle School"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9879707987868702,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "47-2152"
+            ],
+            "median_annual_wage": 63800.0,
+            "occupation_code": "47-2152.00",
+            "related_experience": "None",
+            "title": "Plumbers, Pipefitters, and Steamfitters"
+          },
+          {
+            "cosine_similarity": 0.9877971565835331,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-2011"
+            ],
+            "median_annual_wage": 65380.0,
+            "occupation_code": "51-2011.00",
+            "related_experience": "None",
+            "title": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers"
+          },
+          {
+            "cosine_similarity": 0.984450535246644,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "49-9051"
+            ],
+            "median_annual_wage": 95320.0,
+            "occupation_code": "49-9051.00",
+            "related_experience": "None",
+            "title": "Electrical Power-Line Installers and Repairers"
+          },
+          {
+            "cosine_similarity": 0.9837819944405799,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "49-9044"
+            ],
+            "median_annual_wage": 65700.0,
+            "occupation_code": "49-9044.00",
+            "related_experience": "None",
+            "title": "Millwrights"
+          },
+          {
+            "cosine_similarity": 0.9804089917079917,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "49-3043"
+            ],
+            "median_annual_wage": 67530.0,
+            "occupation_code": "49-3043.00",
+            "related_experience": "None",
+            "title": "Rail Car Repairers"
+          }
+        ],
+        "eligible_after_filters": 46,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 385,
+          "median_retention_unavailable_or_below_threshold": 448,
+          "related_experience_unavailable_or_not_allowed": 30
+        },
+        "request": {
+          "allowed_education": [
+            "High school diploma or equivalent"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "47-2111.00",
+      "source_title": "Electricians",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9885049825520511,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "47-2231"
+            ],
+            "median_annual_wage": 53140.0,
+            "occupation_code": "47-2231.00",
+            "related_experience": "None",
+            "title": "Solar Photovoltaic Installers"
+          },
+          {
+            "cosine_similarity": 0.9879764088338407,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "47-4099"
+            ],
+            "median_annual_wage": null,
+            "occupation_code": "47-4099.03",
+            "related_experience": "None",
+            "title": "Weatherization Installers and Technicians"
+          },
+          {
+            "cosine_similarity": 0.9879707987868702,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "47-2152"
+            ],
+            "median_annual_wage": 63800.0,
+            "occupation_code": "47-2152.00",
+            "related_experience": "None",
+            "title": "Plumbers, Pipefitters, and Steamfitters"
+          },
+          {
+            "cosine_similarity": 0.9877971565835331,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-2011"
+            ],
+            "median_annual_wage": 65380.0,
+            "occupation_code": "51-2011.00",
+            "related_experience": "None",
+            "title": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers"
+          },
+          {
+            "cosine_similarity": 0.987185895994242,
+            "entry_education": "Postsecondary nondegree award",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "49-2097"
+            ],
+            "median_annual_wage": 52600.0,
+            "occupation_code": "49-2097.00",
+            "related_experience": "None",
+            "title": "Audiovisual Equipment Installers and Repairers"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9792492907287458,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-8012"
+            ],
+            "median_annual_wage": 106730.0,
+            "occupation_code": "51-8012.00",
+            "related_experience": "None",
+            "title": "Power Distributors and Dispatchers"
+          },
+          {
+            "cosine_similarity": 0.9682509111189769,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "53-6051"
+            ],
+            "median_annual_wage": 92100.0,
+            "occupation_code": "53-6051.01",
+            "related_experience": "None",
+            "title": "Aviation Inspectors"
+          },
+          {
+            "cosine_similarity": 0.961066244846095,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "53-6051"
+            ],
+            "median_annual_wage": 92100.0,
+            "occupation_code": "53-6051.00",
+            "related_experience": "None",
+            "title": "Transportation Inspectors"
+          },
+          {
+            "cosine_similarity": 0.9605114611701302,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-8092"
+            ],
+            "median_annual_wage": 87820.0,
+            "occupation_code": "51-8092.00",
+            "related_experience": "None",
+            "title": "Gas Plant Operators"
+          },
+          {
+            "cosine_similarity": 0.9590339652617204,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-8013"
+            ],
+            "median_annual_wage": 102040.0,
+            "occupation_code": "51-8013.03",
+            "related_experience": "None",
+            "title": "Biomass Plant Technicians"
+          }
+        ],
+        "eligible_after_filters": 15,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 278,
+          "median_retention_unavailable_or_below_threshold": 604,
+          "related_experience_unavailable_or_not_allowed": 12
+        },
+        "request": {
+          "allowed_education": [
+            "High school diploma or equivalent"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "47-1011.00",
+      "source_title": "First-Line Supervisors of Construction Trades and Extraction Workers",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9932084577946169,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "51-1011"
+            ],
+            "median_annual_wage": 74450.0,
+            "occupation_code": "51-1011.00",
+            "related_experience": "Less than 5 years",
+            "title": "First-Line Supervisors of Production and Operating Workers"
+          },
+          {
+            "cosine_similarity": 0.9908292488488285,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "37-1012"
+            ],
+            "median_annual_wage": 58430.0,
+            "occupation_code": "37-1012.00",
+            "related_experience": "Less than 5 years",
+            "title": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers"
+          },
+          {
+            "cosine_similarity": 0.988258871403852,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "11-3013"
+            ],
+            "median_annual_wage": 106660.0,
+            "occupation_code": "11-3013.00",
+            "related_experience": "Less than 5 years",
+            "title": "Facilities Managers"
+          },
+          {
+            "cosine_similarity": 0.9881295791305246,
+            "entry_education": "High school diploma or equivalent",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "53-1041"
+            ],
+            "median_annual_wage": 58170.0,
+            "occupation_code": "53-1041.00",
+            "related_experience": "Less than 5 years",
+            "title": "Aircraft Cargo Handling Supervisors"
+          },
+          {
+            "cosine_similarity": 0.9877583661698662,
+            "entry_education": "Postsecondary nondegree award",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "33-1021"
+            ],
+            "median_annual_wage": 93530.0,
+            "occupation_code": "33-1021.00",
+            "related_experience": "Less than 5 years",
+            "title": "First-Line Supervisors of Firefighting and Prevention Workers"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    },
+    {
+      "illustrative_source_context_filters": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9814399985944513,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-2051"
+            ],
+            "median_annual_wage": 120230.0,
+            "occupation_code": "15-2051.02",
+            "related_experience": "None",
+            "title": "Clinical Data Managers"
+          },
+          {
+            "cosine_similarity": 0.9809408856303931,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-2011"
+            ],
+            "median_annual_wage": 130000.0,
+            "occupation_code": "15-2011.00",
+            "related_experience": "None",
+            "title": "Actuaries"
+          },
+          {
+            "cosine_similarity": 0.9787748602382792,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "15-2051"
+            ],
+            "median_annual_wage": 120230.0,
+            "occupation_code": "15-2051.00",
+            "related_experience": "None",
+            "title": "Data Scientists"
+          },
+          {
+            "cosine_similarity": 0.9735706588183949,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "29-2036"
+            ],
+            "median_annual_wage": 147470.0,
+            "occupation_code": "29-2036.00",
+            "related_experience": "None",
+            "title": "Medical Dosimetrists"
+          },
+          {
+            "cosine_similarity": 0.9696559511942641,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "41-9031"
+            ],
+            "median_annual_wage": 124900.0,
+            "occupation_code": "41-9031.00",
+            "related_experience": "None",
+            "title": "Sales Engineers"
+          }
+        ],
+        "eligible_after_filters": 23,
+        "filter_exclusions": {
+          "entry_education_unavailable_or_not_allowed": 47,
+          "median_retention_unavailable_or_below_threshold": 800,
+          "related_experience_unavailable_or_not_allowed": 39
+        },
+        "request": {
+          "allowed_education": [
+            "Bachelor's degree"
+          ],
+          "allowed_related_experience": [
+            "None"
+          ],
+          "min_median_retention": 1,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      },
+      "source_code": "15-2051.01",
+      "source_title": "Business Intelligence Analysts",
+      "unfiltered": {
+        "candidates": [
+          {
+            "cosine_similarity": 0.9901953763740411,
+            "entry_education": "Master's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "19-3011"
+            ],
+            "median_annual_wage": 124720.0,
+            "occupation_code": "19-3011.00",
+            "related_experience": "None",
+            "title": "Economists"
+          },
+          {
+            "cosine_similarity": 0.9899438396691981,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "13-1161"
+            ],
+            "median_annual_wage": 78760.0,
+            "occupation_code": "13-1161.00",
+            "related_experience": "None",
+            "title": "Market Research Analysts and Marketing Specialists"
+          },
+          {
+            "cosine_similarity": 0.9895205630045867,
+            "entry_education": "Master's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "19-3022"
+            ],
+            "median_annual_wage": 69460.0,
+            "occupation_code": "19-3022.00",
+            "related_experience": "None",
+            "title": "Survey Researchers"
+          },
+          {
+            "cosine_similarity": 0.9892569025552798,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "13-2099"
+            ],
+            "median_annual_wage": 81100.0,
+            "occupation_code": "13-2099.01",
+            "related_experience": "None",
+            "title": "Financial Quantitative Analysts"
+          },
+          {
+            "cosine_similarity": 0.9874342469354769,
+            "entry_education": "Bachelor's degree",
+            "licensing_and_accessibility": "not_verified",
+            "mapped_wage_codes": [
+              "13-1161"
+            ],
+            "median_annual_wage": 78760.0,
+            "occupation_code": "13-1161.01",
+            "related_experience": "None",
+            "title": "Search Marketing Strategists"
+          }
+        ],
+        "eligible_after_filters": 909,
+        "filter_exclusions": {},
+        "request": {
+          "allowed_education": null,
+          "allowed_related_experience": null,
+          "min_median_retention": null,
+          "min_national_median": null,
+          "top_k": 5
+        }
+      }
+    }
+  ],
+  "config_sha256": "80892d13b7f45921db99888a1579d327e367b6813849f385de8468c424c7ffa5",
+  "coverage": {
+    "catalog_occupations": 1016,
+    "complete_skill_profiles": 910,
+    "core_logical_sha256": "f1803c473f428f073d9db267aa09ab602b6b0932a8ec1e5f5484d234dae8553f",
+    "excluded_profiles": {
+      "11-1031.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Legislators",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "11-9039.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Education Administrators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "11-9179.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Personal Service Managers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "11-9199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Managers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "13-1199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Business Operations Specialists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "13-2051.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Financial and Investment Analysts",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "13-2054.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Financial Risk Specialists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "13-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Financial Specialists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "15-1299.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Computer Occupations, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "15-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Mathematical Science Occupations, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "17-2199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Engineers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "17-3019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Drafters, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "17-3028.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Calibration Technologists and Technicians",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "17-3029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-1029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Biological Scientists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-1099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Life Scientists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Physical Scientists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-3039.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Psychologists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Social Scientists and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-4044.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Hydrologic Technicians",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "19-4099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Life, Physical, and Social Science Technicians, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "21-1019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Counselors, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "21-1029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Social Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "21-1099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Community and Social Service Specialists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "21-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Religious Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "23-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Legal Support Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-1069.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Social Sciences Teachers, Postsecondary, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-1199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Postsecondary Teachers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-2059.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Special Education Teachers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Teachers and Instructors, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-9049.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Teaching Assistants, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "25-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Educational Instruction and Library Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-1019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Artists and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-1029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Designers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Entertainers and Performers, Sports and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Media and Communication Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-4015.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Lighting Technicians",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "27-4099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Media and Communication Equipment Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Dentists, All Other Specialists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1129.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Therapists, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1212.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Cardiologists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1229.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Physicians, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1242.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Orthopedic Surgeons, Except Pediatric",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1243.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Pediatric Surgeons",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1249.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Surgeons, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-1299.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Healthcare Diagnosing or Treating Practitioners, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-2042.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Emergency Medical Technicians",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Health Technologists and Technicians, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-9021.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Health Information Technologists and Medical Registrars",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "29-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Healthcare Practitioners and Technical Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "31-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Healthcare Support Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "33-1099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "First-Line Supervisors of Protective Service Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "33-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Protective Service Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "35-2019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Cooks, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "35-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Food Preparation and Serving Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "37-2019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Building Cleaning Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "37-3019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Grounds Maintenance Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "39-3019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Gambling Service Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "39-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Entertainment Attendants and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "39-4012.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Crematory Operators",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "39-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Personal Care and Service Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "41-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Sales and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "43-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Communications Equipment Operators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "43-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Financial Clerks, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "43-4199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Information and Record Clerks, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "43-9199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Office and Administrative Support Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "45-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Agricultural Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "45-4029.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Logging Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "47-3019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Helpers, Construction Trades, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "47-4099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Construction and Related Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "47-5049.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Underground Mining Machine Operators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "47-5099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Extraction Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "49-9069.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Precision Instrument and Equipment Repairers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "49-9099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Installation, Maintenance, and Repair Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-2099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Assemblers and Fabricators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Food Processing Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-4199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Metal Workers and Plastic Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-6099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Textile, Apparel, and Furnishings Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-7099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Woodworkers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-8099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Plant and System Operators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "51-9199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Production Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-1049.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "First-Line Supervisors of Transportation Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-3054.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Taxi Drivers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-3099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Motor Vehicle Operators, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-4099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Rail Transportation Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-6099.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Transportation Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "53-7199.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Material Moving Workers, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1011.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Air Crew Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1012.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Aircraft Launch and Recovery Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1013.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Armored Assault Vehicle Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1014.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Artillery and Missile Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1015.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Command and Control Center Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1016.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Infantry Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1017.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Special Forces Officers",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-1019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Military Officer Special and Tactical Operations Leaders, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-2011.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "First-Line Supervisors of Air Crew Members",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-2012.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "First-Line Supervisors of Weapons Specialists/Crew Members",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-2013.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "First-Line Supervisors of All Other Tactical Operations Specialists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3011.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Air Crew Members",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3012.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Aircraft Launch and Recovery Specialists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3013.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Armored Assault Vehicle Crew Members",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3014.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Artillery and Missile Crew Members",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3015.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Command and Control Center Specialists",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3016.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Infantry",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3018.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Special Forces",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      },
+      "55-3019.00": {
+        "reason": "A complete source skill profile is required",
+        "title": "Military Enlisted Tactical Operations and Air/Weapons Specialists and Crew Members, All Other",
+        "unusable_importance_elements": [],
+        "usable_importance_count": 0
+      }
+    },
+    "note": "Coverage/integrity audit, not recommendation relevance or feasibility validation.",
+    "preparation_status_counts": {
+      "available": 910
+    },
+    "skill_dimensions": 35,
+    "source_snapshot": "core-2026-10-29-v1",
+    "wage_status_counts": {
+      "missing_target_data": 31,
+      "observed": 875,
+      "suppressed_or_unavailable": 4
+    }
+  },
+  "detected_constraint_violations": 0,
+  "deterministic_repeated_rankings": true,
+  "human_feasibility_validation": "not_performed",
+  "impossible_filters_return_empty": true,
+  "interpretation": "Engineering and coverage checks only. Filters use illustrative occupation context, not verified personal education, income or experience.",
+  "method_version": "occupation-skill-cosine-v0.1.0",
+  "ranking_relevance_metrics": null,
+  "source_notice": "Derived from O*NET 31.0 (USDOL/ETA, CC BY 4.0) and BLS data. HumanBridge selects/normalizes records; USDOL/ETA has not approved, endorsed or tested these modifications. See THIRD_PARTY_NOTICES.md.",
+  "verified_case_study_contracts": 16
+}
