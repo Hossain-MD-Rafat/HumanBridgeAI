@@ -61,3 +61,6 @@ Each experiment records ID, date, data hashes, features, method, parameters, spl
 
 ## Phase 2 implementation boundary
 The [task rubric](task-rubric.md) and [annotation guide](task-annotation-guide.md) implement a purposive 200-task pilot and a lexical evidence baseline. Exact spans are machine-generated cues, not exposure labels. Creative/cultural judgments remain manual-only. All scalar scores and performance metrics remain unset. The committed [pilot report](reports/task-pilot.json) records preparation counts only; independent review, adjudication and final confirmatory evaluation are pending.
+
+## Implemented skill-transition baseline
+The [candidate baseline](skill-transitions.md) compares complete source-normalized occupation skill-importance vectors using cosine. Context is joined through official mappings, remains outside the ranking formula, and can supply explicit filters. Importance differences and separately shown level differences compare occupations, not a worker's verified abilities. Unknown AI/HVI and training costs are not imputed. The published [audit](reports/skill-transition-audit.json) checks structure and source coverage only; independent transition-pair relevance/feasibility evaluation remains pending.

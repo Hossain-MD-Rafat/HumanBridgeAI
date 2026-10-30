@@ -3,7 +3,7 @@
 
 HumanBridge AI is a research and engineering project that helps workers understand task-level AI exposure, recognize human capabilities, explore transferable skills, and plan realistic career transitions across the United States.
 
-**Status: Phase 2 research tooling proposed on a feature branch.** The core data pipeline works. A versioned lexical review baseline and blind 200-task pilot are prepared; human validation is pending. No trained models, production API, dashboard or validated HumanBridge scores exist yet. Numbers in the original concept remain illustrative, not research results.
+**Status: source-backed skill-transition baseline proposed alongside the unvalidated task-review pilot.** The core data pipeline, occupation explorer, offline review tools and skill-candidate CLI work. No validated AI exposure/HVI, personalized career feasibility or empirical ranking-quality claims exist yet.
 
 ## Start here
 1. [Requirements and MVP](docs/requirements.md)
@@ -16,6 +16,7 @@ HumanBridge AI is a research and engineering project that helps workers understa
 8. [Run the data pipeline](docs/running-pipeline.md) and inspect the [coverage report](docs/reports/core-data.json)
 9. [Task review rubric](docs/task-rubric.md), [pilot instructions](docs/task-annotation-guide.md), and [pilot report](docs/reports/task-pilot.json)
 10. [Offline review workbench and agreement analysis](docs/review-workbench.md)
+11. [Skill-transition candidate baseline](docs/skill-transitions.md) and [coverage/contract audit](docs/reports/skill-transition-audit.json)
 
 The [original master brain](docs/master-brain.md) records the owner's vision. Implementation decisions and current status live in the documents above.
 
@@ -96,3 +97,14 @@ Open the printed HTML path in a browser. The file shows one blind reviewer queue
 The agreement command requires completed selected-split pairs and explicit research attestation. It measures reviewer agreement and prepares pending adjudication items; it does not compute model accuracy or invent human labels. Genuine reviews and study results remain pending.
 
 `feature/review-workbench-evaluation` is stacked on the unmerged Phase 2 branch. Its pull request targets `feature/phase-2-task-exposure`; `main` is not changed by this work.
+
+## Explore transferable-skill candidates
+After building the core database:
+
+```bash
+python scripts/recommend_transitions.py 43-3031.00 --allowed-education "High school diploma or equivalent" --allowed-related-experience None --min-median-retention 1
+```
+
+Expected: up to five other occupations ranked solely by 35-skill source-profile cosine, with shared-skill contributions, requirement differences and mapped wage/preparation context. Filters are explicit source-data screens; no licensing, personal qualification or transition-success claim is made. See [method and run instructions](docs/skill-transitions.md).
+
+The eight-case real-data audit verifies deterministic ranking and filter compliance; recommendation relevance remains unvalidated. Branch `feature/skill-transition-baseline` is stacked on `feature/review-workbench-evaluation`. Earlier PRs and main are not automatically merged.

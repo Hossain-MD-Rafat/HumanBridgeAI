@@ -1,5 +1,5 @@
 # Project status
-Date: 2026-10-29. Current milestone: Phase 2 pilot review workbench and agreement tooling implemented on a stacked feature branch; independent human validation pending.
+Date: 2026-10-29. Current milestone: source-backed skill-transition candidate baseline implemented on a stacked feature branch; task/HVI and career relevance validation pending.
 
 ## Completed foundations
 - Phase 0: requirements, architecture, MVP gates, data guide, methodology, schema, risks and roadmap.
@@ -44,3 +44,13 @@ No completed human reviews, agreement metrics, task-model accuracy, 0–100 expo
 - Local Chromium could not launch because this execution environment denies a required socket operation. No local browser visual verification is claimed; the GitHub browser job is the verification path.
 
 Next: review the stacked changes, assign the two independent reviewers, use the workbench to label tasks, validate returned files, then inspect agreement/disagreements before developing validated exposure/HVI scores.
+
+## Transferable-skill candidate increment
+- Branch: feature/skill-transition-baseline, based on and targeting feature/review-workbench-evaluation. Earlier branches and main are not automatically merged.
+- Added complete-case source-normalized 35-skill cosine ranking for 910 occupation profiles. The other 106 catalog profiles remain explicitly excluded rather than imputed.
+- Added top-five candidate explanations with additive shared-skill contributions and positive occupation-importance differences. Differences are not verified personal skill gaps.
+- Added official-mapping national median wage, projection and preparation context, plus opt-in wage/retention, exact entry-education and related-experience filters. Missing required context fails the filter. Licensing/accessibility remain unverified.
+- Added source fingerprint/config/code provenance, deterministic ties, self exclusion and empty outputs for impossible filters. No arbitrary HVI/exposure or composite transition score is introduced.
+- The real-data audit verifies 16 ranking/filter contracts across the eight case-study occupations. It does not establish candidate relevance, accessibility or employment outcomes.
+
+See [skill-transition instructions](skill-transitions.md), [model card](model-cards/skill-transitions.md) and [audit](reports/skill-transition-audit.json). Next product work can connect occupation exploration, task evidence and skill candidates in a worker interface while independent task/career review proceeds.

@@ -29,3 +29,10 @@
 - A single reviewer slot must use one pseudonym consistently, and slots A/B must use different identities. This is a protocol check, not proof of independent human participation.
 - Agreement remains blocked without explicit research attestation and complete pairs for the selected split. Constant-marginal kappa is undefined and reported as null, never silently changed to one.
 - Node and Playwright are optional browser-test dependencies only. Install them with npm ci; use the pinned browser install from the review-workbench guide. If the runtime prohibits Chromium sockets, run the browser smoke check in the repository GitHub Actions environment. Do not interpret a failed browser launch as an application pass.
+
+## Skill-transition candidates
+- Use a full source code from explore_occupation.py. Catalog occupations without all 35 usable skill importance values cannot be ranked; see the coverage audit for exclusions.
+- A high cosine score is similarity of broad occupation requirements, not personal qualification or transition feasibility. Inspect the displayed preparation and unknown licensing/accessibility fields.
+- Education and related-experience filters use exact source category strings. They do not assume degree equivalence or infer your personal qualifications.
+- Wage-retention filtering fails without a usable source median; unknown/suppressed target medians cannot pass required wage filters, even at a zero floor.
+- Audit hash checks fail after method code/config changes until the real-data audit is regenerated from the frozen core. This is deliberate provenance protection.
